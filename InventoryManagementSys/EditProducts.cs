@@ -52,5 +52,48 @@ namespace InventoryManagementSys
             Close();
         }
 
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            string categorynameDB = "";
+            if (categorySelctBox.SelectedIndex >= 0)
+                categorynameDB = categorySelctBox.Items[categorySelctBox.SelectedIndex].ToString();
+            DBConnections.openConnection();
+            MySqlCommand command;
+            string idText = Main.Modify;
+            string id = idText.ToString();
+            if (editprodNameTxtBox.Text != "" || editpriceTxtBox.Text !="" || editqtyTxtBox.Text !="" || barcodeTxtBox.Text !="")
+            {
+                string query = "update product set " +
+                    "product_name = '"+ editprodNameTxtBox.Text + "', " +
+                    "product_price = '" + editpriceTxtBox.Text + "', " +
+                    "stock = '"+ editqtyTxtBox + "', " +
+                    "barcode = '"+ barcodeTxtBox + "', " +
+                    "categoryName='"+ categorynameDB + "' " +
+                    "from product where productID = '" + id + "'";
+                command = new MySqlCommand(query, DBConnections.connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show($"Product with {id} has been updated succesfully!");
+            }
+            else
+            {
+                string message = "Provide all required fields!";
+                string title = "All fields are required";
+                MessageBoxButtons buttons = MessageBoxButtons.AbortRetryIgnore;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                if (result == DialogResult.Abort)
+                {
+                    Products back = new Products();
+                    back.Show();
+                }
+                else if (result == DialogResult.Retry)
+                {
+                    //Close();
+                }
+                else
+                {
+                    // Do something  
+                }
+            }
+        }
     }
 }

@@ -141,6 +141,8 @@ namespace InventoryManagementSys
             {
                 FillgridView();
             }
+            searchArea.Clear();
+
         }
 
 
@@ -172,7 +174,10 @@ namespace InventoryManagementSys
                 {
                     MessageBox.Show(ex.Message);
                 }
+                idTxtBox.Clear();
+
             }
+
             else
             {
                 string message = "Provide id from the products table display!";
@@ -192,6 +197,7 @@ namespace InventoryManagementSys
                 {
                     // Do something  
                 }
+
             }
         }
 

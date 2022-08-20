@@ -84,6 +84,7 @@ namespace InventoryManagementSys
             this.savebtn.Text = "Save";
             this.savebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // addProdTxt
             // 

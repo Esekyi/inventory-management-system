@@ -58,10 +58,5 @@ namespace InventoryManagementSys
             Main.Instance.DashboardButton.Enabled = true;
 
         }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-        }
-
     }
 }
