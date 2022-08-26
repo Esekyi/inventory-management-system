@@ -26,5 +26,10 @@ namespace InventoryManagementSys
         {
 
         }
+
+        private void PassTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
