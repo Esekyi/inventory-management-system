@@ -19,5 +19,10 @@ namespace InventoryManagementSys
         {
 
         }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
