@@ -88,6 +88,7 @@ namespace InventoryManagementSys
             this.users.Text = "User";
             this.users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.users.UseVisualStyleBackColor = true;
+            this.users.Click += new System.EventHandler(this.users_Click);
             // 
             // label1
             // 

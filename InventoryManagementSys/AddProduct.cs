@@ -24,10 +24,15 @@ namespace InventoryManagementSys
                 categorynameDB = categorySelctBox.Items[categorySelctBox.SelectedIndex].ToString();
             DBConnections.openConnection();
             MySqlCommand command;
-            if (prodTxtBox.Text != "" & priceTxtBox.Text != "" & qtyTxtBox.Text != "")
+            if (prodTxtBox.Text != "" & priceTxtBox.Text != "" &
+                qtyTxtBox.Text != "" & reoderTxtbox.Text != "" & 
+                barcodeTxtBox.Text !="")
             {
-                string query = "insert into `product` (`product_name`,`categoryName`,`product_price`,`stock`,`barcode`) values ( '" + prodTxtBox.Text.Trim() + "','" + categorynameDB.Trim() + "', '" + priceTxtBox.Text.Trim() + "'" +
-                    ",'" + qtyTxtBox.Text.Trim() + "', '" + barcodeTxtBox.Text.Trim() + "' )";
+                string query = "insert into `product` (`product_name`,`categoryName`,`product_price`," +
+                    "`stock`,`reoderLevel`,`barcode`) values ( '" + prodTxtBox.Text.Trim() + "'," +
+                    "'" + categorynameDB.Trim() + "', '" + priceTxtBox.Text.Trim() + "'" +
+                    ",'" + qtyTxtBox.Text.Trim() + "', '"+ reoderTxtbox.Text.Trim() +"'," +
+                    "'" + barcodeTxtBox.Text.Trim() + "' )";
                 command = new MySqlCommand(query, DBConnections.connection);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Product Added Successfully");

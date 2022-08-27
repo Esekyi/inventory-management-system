@@ -66,7 +66,7 @@ namespace InventoryManagementSys
             this.cancelBtn.Location = new System.Drawing.Point(780, 633);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(161, 61);
-            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.TabIndex = 7;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -80,7 +80,7 @@ namespace InventoryManagementSys
             this.savebtn.Location = new System.Drawing.Point(282, 633);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(161, 61);
-            this.savebtn.TabIndex = 6;
+            this.savebtn.TabIndex = 5;
             this.savebtn.Text = "Save";
             this.savebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.savebtn.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@ namespace InventoryManagementSys
             this.categorySelctBox.Location = new System.Drawing.Point(151, 17);
             this.categorySelctBox.Name = "categorySelctBox";
             this.categorySelctBox.Size = new System.Drawing.Size(492, 40);
-            this.categorySelctBox.TabIndex = 5;
+            this.categorySelctBox.TabIndex = 4;
             // 
             // catLabel
             // 
@@ -161,7 +161,7 @@ namespace InventoryManagementSys
             this.barcodeTxtBox.Location = new System.Drawing.Point(119, 20);
             this.barcodeTxtBox.Name = "barcodeTxtBox";
             this.barcodeTxtBox.Size = new System.Drawing.Size(524, 32);
-            this.barcodeTxtBox.TabIndex = 4;
+            this.barcodeTxtBox.TabIndex = 3;
             // 
             // panel4
             // 
@@ -179,17 +179,17 @@ namespace InventoryManagementSys
             this.qtyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(26)))), ((int)(((byte)(82)))));
             this.qtyLabel.Location = new System.Drawing.Point(8, 17);
             this.qtyLabel.Name = "qtyLabel";
-            this.qtyLabel.Size = new System.Drawing.Size(118, 32);
+            this.qtyLabel.Size = new System.Drawing.Size(83, 32);
             this.qtyLabel.TabIndex = 0;
-            this.qtyLabel.Text = "Quantity: ";
+            this.qtyLabel.Text = "Stock: ";
             // 
             // editqtyTxtBox
             // 
             this.editqtyTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.editqtyTxtBox.Location = new System.Drawing.Point(130, 20);
+            this.editqtyTxtBox.Location = new System.Drawing.Point(103, 18);
             this.editqtyTxtBox.Name = "editqtyTxtBox";
             this.editqtyTxtBox.Size = new System.Drawing.Size(163, 32);
-            this.editqtyTxtBox.TabIndex = 3;
+            this.editqtyTxtBox.TabIndex = 2;
             // 
             // panel2
             // 
@@ -217,7 +217,7 @@ namespace InventoryManagementSys
             this.editpriceTxtBox.Location = new System.Drawing.Point(86, 20);
             this.editpriceTxtBox.Name = "editpriceTxtBox";
             this.editpriceTxtBox.Size = new System.Drawing.Size(154, 32);
-            this.editpriceTxtBox.TabIndex = 2;
+            this.editpriceTxtBox.TabIndex = 1;
             // 
             // panel1
             // 
@@ -245,7 +245,7 @@ namespace InventoryManagementSys
             this.editprodNameTxtBox.Location = new System.Drawing.Point(193, 19);
             this.editprodNameTxtBox.Name = "editprodNameTxtBox";
             this.editprodNameTxtBox.Size = new System.Drawing.Size(439, 32);
-            this.editprodNameTxtBox.TabIndex = 1;
+            this.editprodNameTxtBox.TabIndex = 0;
             // 
             // deletebtn
             // 
@@ -257,9 +257,10 @@ namespace InventoryManagementSys
             this.deletebtn.Location = new System.Drawing.Point(522, 633);
             this.deletebtn.Name = "deletebtn";
             this.deletebtn.Size = new System.Drawing.Size(161, 61);
-            this.deletebtn.TabIndex = 7;
+            this.deletebtn.TabIndex = 6;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // EditProducts
             // 

@@ -64,12 +64,12 @@ namespace InventoryManagementSys
             foreach (DataRow product in dataTable.Rows)
             {
                 int numberRow = gridView.Rows.Add();
-                gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString();
-                gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString();
-                gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString();
-                gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString();
-                gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString();
-                gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString();
+                gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString().ToUpper();
             }
         }
 
@@ -85,12 +85,12 @@ namespace InventoryManagementSys
             foreach (DataRow product in dataTable.Rows)
             {
                 int numberRow = gridView.Rows.Add();
-                gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString();
-                gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString();
-                gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString();
-                gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString();
-                gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString();
-                gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString();
+                gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString().ToLower();
+                gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString().ToUpper();
             }
         }
 
@@ -124,12 +124,12 @@ namespace InventoryManagementSys
                     foreach (DataRow product in ds.Rows)
                     {
                         int numberRow = gridView.Rows.Add();
-                        gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString();
-                        gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString();
-                        gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString();
-                        gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString();
-                        gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString();
-                        gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString();
+                        gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString().ToLower();
+                        gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString().ToLower();
+                        gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString().ToLower();
+                        gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString().ToLower();
+                        gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString().ToLower();
+                        gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString().ToUpper();
                     }
                 }
                 catch (Exception ex)
@@ -160,7 +160,7 @@ namespace InventoryManagementSys
                     Int32 count = Convert.ToInt32(command.ExecuteScalar());
                     if (count > 0)
                     {
-                        Modify = idTxtBox.Text;
+                        Main.Modify = idTxtBox.Text;
                         EditProducts editProduct = new EditProducts();
                         editProduct.Show();
                     }
