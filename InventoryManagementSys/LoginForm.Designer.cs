@@ -44,9 +44,9 @@ namespace InventoryManagementSys
             // 
             this.LoginUsrname.AutoSize = true;
             this.LoginUsrname.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LoginUsrname.Location = new System.Drawing.Point(7, 15);
+            this.LoginUsrname.Location = new System.Drawing.Point(8, 17);
             this.LoginUsrname.Name = "LoginUsrname";
-            this.LoginUsrname.Size = new System.Drawing.Size(121, 32);
+            this.LoginUsrname.Size = new System.Drawing.Size(136, 37);
             this.LoginUsrname.TabIndex = 0;
             this.LoginUsrname.Text = "Username";
             this.LoginUsrname.Click += new System.EventHandler(this.LoginUsrname_Click);
@@ -55,9 +55,9 @@ namespace InventoryManagementSys
             // 
             this.LoginPwd.AutoSize = true;
             this.LoginPwd.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LoginPwd.Location = new System.Drawing.Point(7, 15);
+            this.LoginPwd.Location = new System.Drawing.Point(8, 17);
             this.LoginPwd.Name = "LoginPwd";
-            this.LoginPwd.Size = new System.Drawing.Size(111, 32);
+            this.LoginPwd.Size = new System.Drawing.Size(128, 37);
             this.LoginPwd.TabIndex = 0;
             this.LoginPwd.Text = "Password";
             // 
@@ -66,27 +66,28 @@ namespace InventoryManagementSys
             this.LoginButton.AutoSize = true;
             this.LoginButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(398, 306);
+            this.LoginButton.Location = new System.Drawing.Point(400, 376);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(150, 46);
-            this.LoginButton.TabIndex = 1;
+            this.LoginButton.Size = new System.Drawing.Size(284, 69);
+            this.LoginButton.TabIndex = 3;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // UsrTxtBox
             // 
             this.UsrTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsrTxtBox.Location = new System.Drawing.Point(136, 15);
+            this.UsrTxtBox.Location = new System.Drawing.Point(157, 17);
             this.UsrTxtBox.Name = "UsrTxtBox";
-            this.UsrTxtBox.Size = new System.Drawing.Size(407, 32);
-            this.UsrTxtBox.TabIndex = 2;
+            this.UsrTxtBox.Size = new System.Drawing.Size(470, 36);
+            this.UsrTxtBox.TabIndex = 1;
             // 
             // PassTxtbox
             // 
             this.PassTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PassTxtbox.Location = new System.Drawing.Point(136, 17);
+            this.PassTxtbox.Location = new System.Drawing.Point(157, 20);
             this.PassTxtbox.Name = "PassTxtbox";
-            this.PassTxtbox.Size = new System.Drawing.Size(407, 32);
+            this.PassTxtbox.Size = new System.Drawing.Size(470, 36);
             this.PassTxtbox.TabIndex = 2;
             this.PassTxtbox.TextChanged += new System.EventHandler(this.PassTxtbox_TextChanged);
             // 
@@ -95,9 +96,9 @@ namespace InventoryManagementSys
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.LoginUsrname);
             this.panel1.Controls.Add(this.UsrTxtBox);
-            this.panel1.Location = new System.Drawing.Point(179, 86);
+            this.panel1.Location = new System.Drawing.Point(207, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(596, 64);
+            this.panel1.Size = new System.Drawing.Size(688, 74);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -105,28 +106,28 @@ namespace InventoryManagementSys
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.PassTxtbox);
             this.panel2.Controls.Add(this.LoginPwd);
-            this.panel2.Location = new System.Drawing.Point(179, 201);
+            this.panel2.Location = new System.Drawing.Point(207, 193);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(596, 71);
+            this.panel2.Size = new System.Drawing.Size(688, 82);
             this.panel2.TabIndex = 4;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(976, 430);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1126, 497);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LoginButton);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1002, 501);
+            this.MaximumSize = new System.Drawing.Size(1152, 568);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1002, 501);
+            this.MinimumSize = new System.Drawing.Size(1152, 568);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
