@@ -61,6 +61,18 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TillSale.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        bQAAAW0BKel+SQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFCSURBVEhL7Za9
+        SgNBFEZXSCOIhW9gUgpCSJNX8AEs7LW2FAR9kDyF1oKNVkKMokQsVLAUlP1JZubOyky+SYZ1w24K9bo2
+        +8FZZmbv3sNlmwkWxVq7DjpMtHzbxUHRCXhiIgY933o+eNEG20xsgWWwBpy0OCkOj8AZE3fgFjjpC+hO
+        Je/WroZS74WCDjiIlNoPlWpCsATugZt0JsSjEQu6iSRZZhIvPQc7mfCDaLOk+FuMlH4UOu2PKR1gH2fv
+        MGlBGAndzQp+yKcxl2g2NLOmrzhL3Hko6RB7fmEe5BmT9t26EqExZigovXLrioT2YkT6wa0rEeaphezU
+        QnZqITv/LTwFzcqE06uFSwXCY9D2ur8Xes1XcO9olRVzEEu96zXziaXqlX3wKxRdv1m74hXFuBtWONYd
+        DhKiDfy3hm+dSxBMAESuqv4DHNOVAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="users.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB

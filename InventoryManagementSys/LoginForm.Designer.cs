@@ -37,6 +37,7 @@ namespace InventoryManagementSys
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.showPass = new System.Windows.Forms.CheckBox();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +69,7 @@ namespace InventoryManagementSys
             this.LoginButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(400, 370);
+            this.LoginButton.Location = new System.Drawing.Point(400, 372);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(284, 75);
             this.LoginButton.TabIndex = 3;
@@ -101,7 +102,7 @@ namespace InventoryManagementSys
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.LoginUsrname);
             this.panel1.Controls.Add(this.UsrTxtBox);
-            this.panel1.Location = new System.Drawing.Point(207, 60);
+            this.panel1.Location = new System.Drawing.Point(207, 93);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(688, 74);
             this.panel1.TabIndex = 3;
@@ -111,7 +112,7 @@ namespace InventoryManagementSys
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.PassTxtbox);
             this.panel2.Controls.Add(this.LoginPwd);
-            this.panel2.Location = new System.Drawing.Point(207, 193);
+            this.panel2.Location = new System.Drawing.Point(207, 201);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(688, 82);
             this.panel2.TabIndex = 4;
@@ -121,12 +122,23 @@ namespace InventoryManagementSys
             this.showPass.AutoSize = true;
             this.showPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.showPass.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.showPass.Location = new System.Drawing.Point(690, 295);
+            this.showPass.Location = new System.Drawing.Point(690, 303);
             this.showPass.Name = "showPass";
             this.showPass.Size = new System.Drawing.Size(205, 36);
             this.showPass.TabIndex = 5;
             this.showPass.Text = "Show Password";
             this.showPass.UseVisualStyleBackColor = true;
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.errorLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorLabel.Location = new System.Drawing.Point(337, 29);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(70, 32);
+            this.errorLabel.TabIndex = 6;
+            this.errorLabel.Text = "Label";
             // 
             // Login
             // 
@@ -135,6 +147,7 @@ namespace InventoryManagementSys
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1126, 497);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.showPass);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -165,6 +178,7 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox showPass;
+        private System.Windows.Forms.Label errorLabel;
     }
 }
 

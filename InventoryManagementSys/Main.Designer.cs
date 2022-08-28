@@ -42,6 +42,7 @@ namespace InventoryManagementSys
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.prodLabel = new System.Windows.Forms.Label();
             this.panelHolder = new System.Windows.Forms.Panel();
+            this.TillSale = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).BeginInit();
             this.panel5.SuspendLayout();
@@ -52,6 +53,7 @@ namespace InventoryManagementSys
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(107)))));
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.TillSale);
             this.panel1.Controls.Add(this.users);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.HomeLogo);
@@ -81,9 +83,9 @@ namespace InventoryManagementSys
             this.users.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.users.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.users.Image = ((System.Drawing.Image)(resources.GetObject("users.Image")));
-            this.users.Location = new System.Drawing.Point(1, 653);
+            this.users.Location = new System.Drawing.Point(0, 674);
             this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(252, 107);
+            this.users.Size = new System.Drawing.Size(252, 104);
             this.users.TabIndex = 10;
             this.users.Text = "User";
             this.users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -120,7 +122,7 @@ namespace InventoryManagementSys
             this.CategoryBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CategoryBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CategoryBtn.Image = ((System.Drawing.Image)(resources.GetObject("CategoryBtn.Image")));
-            this.CategoryBtn.Location = new System.Drawing.Point(0, 529);
+            this.CategoryBtn.Location = new System.Drawing.Point(0, 546);
             this.CategoryBtn.Name = "CategoryBtn";
             this.CategoryBtn.Size = new System.Drawing.Size(252, 107);
             this.CategoryBtn.TabIndex = 9;
@@ -138,7 +140,7 @@ namespace InventoryManagementSys
             this.ProductsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ProductsBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.ProductsBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProductsBtn.Image")));
-            this.ProductsBtn.Location = new System.Drawing.Point(0, 407);
+            this.ProductsBtn.Location = new System.Drawing.Point(0, 418);
             this.ProductsBtn.Name = "ProductsBtn";
             this.ProductsBtn.Size = new System.Drawing.Size(252, 107);
             this.ProductsBtn.TabIndex = 8;
@@ -212,6 +214,24 @@ namespace InventoryManagementSys
             this.panelHolder.Size = new System.Drawing.Size(1530, 1202);
             this.panelHolder.TabIndex = 7;
             // 
+            // TillSale
+            // 
+            this.TillSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TillSale.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TillSale.FlatAppearance.BorderSize = 0;
+            this.TillSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TillSale.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TillSale.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TillSale.Image = ((System.Drawing.Image)(resources.GetObject("TillSale.Image")));
+            this.TillSale.Location = new System.Drawing.Point(0, 799);
+            this.TillSale.Name = "TillSale";
+            this.TillSale.Size = new System.Drawing.Size(252, 104);
+            this.TillSale.TabIndex = 10;
+            this.TillSale.Text = "Sale/Till";
+            this.TillSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TillSale.UseVisualStyleBackColor = true;
+            this.TillSale.Click += new System.EventHandler(this.users_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -250,5 +270,6 @@ namespace InventoryManagementSys
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelHolder;
+        private System.Windows.Forms.Button TillSale;
     }
 }

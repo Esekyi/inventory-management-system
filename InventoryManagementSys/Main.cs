@@ -46,7 +46,6 @@ namespace InventoryManagementSys
 
         void Dashboard()
         {
-            //gridView.Visible = false;
             prodLabel.Text = "Dashboard";
     
             _obj = this;
@@ -65,11 +64,6 @@ namespace InventoryManagementSys
             prodLabel.Text = "Dashboard";
         }
 
-        //---------------------------------ENDS----------------------------------------------------------------------------------------
-
-
-
-        //DASHBOARD - HOME ---------------------------START-----------------------------------------------------------------------------
 
         private void ProductsBtn_Click(object sender, EventArgs e)
         {
@@ -79,9 +73,9 @@ namespace InventoryManagementSys
                 productsPage.Dock = DockStyle.Fill;
                 Instance.PanelHolder.Controls.Add(productsPage);
             }
-            prodLabel.Text = "Products";
             Instance.PanelHolder.Controls["Products"].BringToFront();
             Instance.DashboardButton.Enabled = true;
+            prodLabel.Text = "Manage Products";
         }
 
 
@@ -89,12 +83,14 @@ namespace InventoryManagementSys
         {
             if (!Main.Instance.PanelHolder.Controls.ContainsKey("Category"))
             {
+
                 Category categoryPage = new Category();
                 categoryPage.Dock = DockStyle.Fill;
                 Main.Instance.PanelHolder.Controls.Add(categoryPage);
             }
             Instance.PanelHolder.Controls["Category"].BringToFront();
             Instance.DashboardButton.Enabled = true;
+            prodLabel.Text = "Manage Categories";
         }
 
         private void users_Click(object sender, EventArgs e)
@@ -107,6 +103,7 @@ namespace InventoryManagementSys
             }
             Main.Instance.PanelHolder.Controls["Users"].BringToFront();
             Main.Instance.DashboardButton.Enabled = true;
+            prodLabel.Text = "Manage Users";
         }
 
     }
