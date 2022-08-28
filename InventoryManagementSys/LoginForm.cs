@@ -17,11 +17,6 @@ namespace InventoryManagementSys
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoginUsrname_Click(object sender, EventArgs e)
         {
 
@@ -30,6 +25,13 @@ namespace InventoryManagementSys
         private void PassTxtbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            HomeScreen Home = new HomeScreen();
+            Home.Show();
+            this.Hide();
         }
     }
 }
