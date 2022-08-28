@@ -91,6 +91,8 @@ namespace InventoryManagementSys
                 errorLabel.Text = "Wrong username or password. Try again!";
                 t.Start();
             }
+            UsrTxtBox.Clear();
+            PassTxtbox.Clear();
 
         }
     }

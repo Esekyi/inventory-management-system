@@ -26,7 +26,7 @@ namespace InventoryManagementSys
                     {
                         new ObservablePoint(0,10),
                         new ObservablePoint(4,7),
-                        new ObservablePoint(5,3),
+                        new ObservablePoint(9,3),
                         new ObservablePoint(0,10),
                         new ObservablePoint(10,8)
                     },
@@ -42,7 +42,7 @@ namespace InventoryManagementSys
                         new ObservablePoint(6,8),
                         new ObservablePoint(10,5)
                     },
-                    PointGeometrySize = 15
+                    PointGeometrySize = 20
                 }
             };
         }
