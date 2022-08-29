@@ -82,7 +82,7 @@ namespace InventoryManagementSys
             this.addProdTxt.AutoSize = true;
             this.addProdTxt.Font = new System.Drawing.Font("Segoe UI Semibold", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addProdTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(26)))), ((int)(((byte)(82)))));
-            this.addProdTxt.Location = new System.Drawing.Point(445, 48);
+            this.addProdTxt.Location = new System.Drawing.Point(452, 48);
             this.addProdTxt.Name = "addProdTxt";
             this.addProdTxt.Size = new System.Drawing.Size(319, 50);
             this.addProdTxt.TabIndex = 12;
@@ -280,10 +280,10 @@ namespace InventoryManagementSys
             // reoderTxtbox
             // 
             this.reoderTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.reoderTxtbox.Location = new System.Drawing.Point(185, 18);
+            this.reoderTxtbox.Location = new System.Drawing.Point(176, 18);
             this.reoderTxtbox.Name = "reoderTxtbox";
             this.reoderTxtbox.PlaceholderText = "Reoder Level";
-            this.reoderTxtbox.Size = new System.Drawing.Size(451, 32);
+            this.reoderTxtbox.Size = new System.Drawing.Size(461, 32);
             this.reoderTxtbox.TabIndex = 1;
             // 
             // AddProduct
@@ -302,6 +302,7 @@ namespace InventoryManagementSys
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Product";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

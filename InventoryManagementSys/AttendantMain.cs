@@ -16,6 +16,8 @@ namespace InventoryManagementSys
             ActiveBtn(SalesBtn, null);
             AttendantControls.SalesPage salesPage = new AttendantControls.SalesPage();
             AttachUserControls(salesPage);
+            userLabel.Text = Login.userName;
+            userLabel.ForeColor = Color.Gold;
         }
 
         private void ActiveBtn(object sender, EventArgs e)
