@@ -133,7 +133,7 @@ namespace InventoryManagementSys
             // 
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.errorLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
             this.errorLabel.Location = new System.Drawing.Point(337, 29);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(70, 32);

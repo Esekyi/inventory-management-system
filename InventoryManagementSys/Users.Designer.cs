@@ -53,7 +53,7 @@ namespace InventoryManagementSys
             this.FinNameLabel = new System.Windows.Forms.Label();
             this.FindNameTxtBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.delAccBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.AccountType = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,6 +80,7 @@ namespace InventoryManagementSys
             this.panel16 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.resetUsernameArea = new System.Windows.Forms.TextBox();
+            this.resetLabel = new System.Windows.Forms.Label();
             this.createAcc.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -123,9 +124,8 @@ namespace InventoryManagementSys
             this.AccountFlash.ForeColor = System.Drawing.Color.Green;
             this.AccountFlash.Location = new System.Drawing.Point(31, 44);
             this.AccountFlash.Name = "AccountFlash";
-            this.AccountFlash.Size = new System.Drawing.Size(124, 37);
+            this.AccountFlash.Size = new System.Drawing.Size(0, 37);
             this.AccountFlash.TabIndex = 10;
-            this.AccountFlash.Text = "Message";
             // 
             // CreateAccButton
             // 
@@ -340,7 +340,7 @@ namespace InventoryManagementSys
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.delAccBtn);
             this.groupBox2.Controls.Add(this.panel6);
             this.groupBox2.Controls.Add(this.panel7);
             this.groupBox2.Controls.Add(this.panel8);
@@ -353,19 +353,20 @@ namespace InventoryManagementSys
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Create New Account";
             // 
-            // button1
+            // delAccBtn
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(339, 640);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(284, 75);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Delete Account";
-            this.button1.UseVisualStyleBackColor = false;
+            this.delAccBtn.AutoSize = true;
+            this.delAccBtn.BackColor = System.Drawing.Color.Red;
+            this.delAccBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delAccBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delAccBtn.ForeColor = System.Drawing.Color.White;
+            this.delAccBtn.Location = new System.Drawing.Point(339, 640);
+            this.delAccBtn.Name = "delAccBtn";
+            this.delAccBtn.Size = new System.Drawing.Size(284, 75);
+            this.delAccBtn.TabIndex = 9;
+            this.delAccBtn.Text = "Delete Account";
+            this.delAccBtn.UseVisualStyleBackColor = false;
+            this.delAccBtn.Click += new System.EventHandler(this.delAccBtn_Click);
             // 
             // panel6
             // 
@@ -514,6 +515,7 @@ namespace InventoryManagementSys
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.resetLabel);
             this.groupBox3.Controls.Add(this.modifyPwd);
             this.groupBox3.Controls.Add(this.panel12);
             this.groupBox3.Controls.Add(this.panel15);
@@ -538,13 +540,14 @@ namespace InventoryManagementSys
             this.modifyPwd.TabIndex = 9;
             this.modifyPwd.Text = "Change Password";
             this.modifyPwd.UseVisualStyleBackColor = false;
+            this.modifyPwd.Click += new System.EventHandler(this.modifyPwd_Click);
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.ConfirmPass);
             this.panel12.Controls.Add(this.ConfirmLabel);
-            this.panel12.Location = new System.Drawing.Point(687, 60);
+            this.panel12.Location = new System.Drawing.Point(687, 79);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(592, 82);
             this.panel12.TabIndex = 6;
@@ -574,7 +577,7 @@ namespace InventoryManagementSys
             this.panel15.BackColor = System.Drawing.Color.White;
             this.panel15.Controls.Add(this.ModifyPass);
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(31, 149);
+            this.panel15.Location = new System.Drawing.Point(31, 168);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(592, 82);
             this.panel15.TabIndex = 6;
@@ -603,7 +606,7 @@ namespace InventoryManagementSys
             this.panel16.BackColor = System.Drawing.Color.White;
             this.panel16.Controls.Add(this.label11);
             this.panel16.Controls.Add(this.resetUsernameArea);
-            this.panel16.Location = new System.Drawing.Point(31, 60);
+            this.panel16.Location = new System.Drawing.Point(31, 79);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(592, 74);
             this.panel16.TabIndex = 5;
@@ -626,6 +629,16 @@ namespace InventoryManagementSys
             this.resetUsernameArea.PlaceholderText = "username";
             this.resetUsernameArea.Size = new System.Drawing.Size(393, 32);
             this.resetUsernameArea.TabIndex = 1;
+            // 
+            // resetLabel
+            // 
+            this.resetLabel.AutoSize = true;
+            this.resetLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.resetLabel.ForeColor = System.Drawing.Color.Red;
+            this.resetLabel.Location = new System.Drawing.Point(693, 168);
+            this.resetLabel.Name = "resetLabel";
+            this.resetLabel.Size = new System.Drawing.Size(0, 32);
+            this.resetLabel.TabIndex = 11;
             // 
             // Users
             // 
@@ -704,7 +717,7 @@ namespace InventoryManagementSys
         private System.Windows.Forms.TextBox FindNameTxtBox;
         private System.Windows.Forms.ListBox DetailsBox;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button delAccBtn;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
@@ -732,5 +745,6 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox resetUsernameArea;
         private System.Windows.Forms.Label AccountFlash;
+        private System.Windows.Forms.Label resetLabel;
     }
 }

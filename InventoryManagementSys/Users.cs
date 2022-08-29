@@ -31,6 +31,7 @@ namespace InventoryManagementSys
         {
             Timer _t = sender as Timer;
             AccountFlash.Text = "";
+            resetLabel.Text = "";
             _t.Stop();
         }
 
@@ -136,6 +137,9 @@ namespace InventoryManagementSys
 
         private void CreateAccButton_Click(object sender, EventArgs e)
         {
+            if (UsrTxtBox.Text == "")
+                return;
+
             string accountType = "";
             if (AccType.SelectedIndex >= 0)
             {
@@ -185,6 +189,69 @@ namespace InventoryManagementSys
 
             DBConnections.closeConnection();
             UpdateUsersList("");
+            AccountID.Clear();
+            UsernameDisplay.Clear();
+            AccName.Clear();
+            AccountType.Clear();
+            DateOfBirth.Clear();
+            
+        }
+
+        private void delAccBtn_Click(object sender, EventArgs e)
+        {
+            if (UsernameDisplay.Text == "")
+                return;
+
+
+            string query = "DELETE FROM `users` WHERE `user_username` = @username";
+            MySqlCommand command;
+            command = new MySqlCommand(query, DBConnections.connection);
+            command.Parameters.AddWithValue("@username", UsernameDisplay.Text);
+            DBConnections.openConnection();
+            if(command.ExecuteNonQuery() > 0)
+            {
+                MessageBox.Show("Account Deleted!");
+            }
+            else
+            {
+                MessageBox.Show("Account Couldn't be deleted");
+            }
+            DBConnections.closeConnection();
+            UpdateUsersList("");
+            AccountID.Clear();
+            UsernameDisplay.Clear();
+            AccName.Clear();
+            AccountType.Clear();
+            DateOfBirth.Clear();
+        }
+
+        private void modifyPwd_Click(object sender, EventArgs e)
+        {
+            if (ModifyPass.Text == "")
+            {
+                resetLabel.Text = "Please ensure all field has same password";
+                t.Start();
+                return;
+            }
+
+            string query = "UPDATE `users` SET `user_password` = @password WHERE `user_username` = @username";
+            MySqlCommand command;
+            command = new MySqlCommand(query, DBConnections.connection);
+            command.Parameters.AddWithValue("@username", resetUsernameArea.Text);
+            if(ModifyPass.Text == ConfirmPass.Text)
+            {
+                command.Parameters.AddWithValue("@password", Utilis.hashPassword(ModifyPass.Text));
+                MessageBox.Show("Success");
+            }
+            else
+            {
+                resetLabel.Text = "Please ensure all field has same password";
+                t.Start();
+            }
+            ModifyPass.Clear();
+            ConfirmPass.Clear();
+
+            DBConnections.openConnection();
         }
     }
 }
