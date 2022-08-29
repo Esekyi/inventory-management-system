@@ -70,6 +70,7 @@ namespace InventoryManagementSys
             this.label6 = new System.Windows.Forms.Label();
             this.AccountID = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.resetLabel = new System.Windows.Forms.Label();
             this.modifyPwd = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.ConfirmPass = new System.Windows.Forms.TextBox();
@@ -79,8 +80,7 @@ namespace InventoryManagementSys
             this.label10 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.resetUsernameArea = new System.Windows.Forms.TextBox();
-            this.resetLabel = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.Label();
             this.createAcc.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -527,6 +527,16 @@ namespace InventoryManagementSys
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reset Password";
             // 
+            // resetLabel
+            // 
+            this.resetLabel.AutoSize = true;
+            this.resetLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.resetLabel.ForeColor = System.Drawing.Color.Red;
+            this.resetLabel.Location = new System.Drawing.Point(693, 168);
+            this.resetLabel.Name = "resetLabel";
+            this.resetLabel.Size = new System.Drawing.Size(0, 32);
+            this.resetLabel.TabIndex = 11;
+            // 
             // modifyPwd
             // 
             this.modifyPwd.AutoSize = true;
@@ -604,8 +614,8 @@ namespace InventoryManagementSys
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Controls.Add(this.username);
             this.panel16.Controls.Add(this.label11);
-            this.panel16.Controls.Add(this.resetUsernameArea);
             this.panel16.Location = new System.Drawing.Point(31, 79);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(592, 74);
@@ -621,24 +631,14 @@ namespace InventoryManagementSys
             this.label11.TabIndex = 0;
             this.label11.Text = "Username:";
             // 
-            // resetUsernameArea
+            // username
             // 
-            this.resetUsernameArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.resetUsernameArea.Location = new System.Drawing.Point(158, 18);
-            this.resetUsernameArea.Name = "resetUsernameArea";
-            this.resetUsernameArea.PlaceholderText = "username";
-            this.resetUsernameArea.Size = new System.Drawing.Size(393, 32);
-            this.resetUsernameArea.TabIndex = 1;
-            // 
-            // resetLabel
-            // 
-            this.resetLabel.AutoSize = true;
-            this.resetLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.resetLabel.ForeColor = System.Drawing.Color.Red;
-            this.resetLabel.Location = new System.Drawing.Point(693, 168);
-            this.resetLabel.Name = "resetLabel";
-            this.resetLabel.Size = new System.Drawing.Size(0, 32);
-            this.resetLabel.TabIndex = 11;
+            this.username.AutoSize = true;
+            this.username.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.username.Location = new System.Drawing.Point(157, 18);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(0, 32);
+            this.username.TabIndex = 0;
             // 
             // Users
             // 
@@ -743,8 +743,8 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox resetUsernameArea;
         private System.Windows.Forms.Label AccountFlash;
         private System.Windows.Forms.Label resetLabel;
+        private System.Windows.Forms.Label username;
     }
 }

@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace InventoryManagementSys
@@ -19,12 +15,12 @@ namespace InventoryManagementSys
             AccountFlash.Visible = false;
             t.Interval = 3000;
             t.Tick += T_Tick;
-            resetUsernameArea.Enabled = false;
-            AccountID.Enabled =false;
+            AccountID.Enabled = false;
             UsernameDisplay.Enabled = false;
             AccName.Enabled = false;
             AccountType.Enabled = false;
             DateOfBirth.Enabled = false;
+
         }
 
         private void T_Tick(object sender, EventArgs e)
@@ -80,7 +76,7 @@ namespace InventoryManagementSys
             {
                 account_id = ((Account)DetailsBox.SelectedItem).getID();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return;
             }
@@ -97,7 +93,7 @@ namespace InventoryManagementSys
             {
                 AccountID.Text = account_id.ToString();
                 UsernameDisplay.Text = reader.GetValue(0).ToString();
-                resetUsernameArea.Text = reader.GetValue(0).ToString();
+                username.Text = reader.GetValue(0).ToString();
                 AccName.Text = reader.GetValue(1).ToString();
                 DateOfBirth.Text = reader.GetValue(2).ToString();
 
@@ -154,10 +150,10 @@ namespace InventoryManagementSys
             command.Parameters.AddWithValue("@password", Utilis.hashPassword(PassTxtbox.Text));
             DBConnections.openConnection();
 
-            if(command.ExecuteNonQuery() > 0)
+            if (command.ExecuteNonQuery() > 0)
             {
                 command.CommandText = "SELECT `user_userID` FROM `users` WHERE user_username = @username";
-                int user_id = (int) command.ExecuteScalar();
+                int user_id = (int)command.ExecuteScalar();
 
                 command.CommandText = "INSERT INTO `account` (`account_userID`, `account_name`, `account_dob`, `account_type`) VALUES (@userID, @name, @dob, @type)";
                 command.Parameters.Clear();
@@ -166,13 +162,13 @@ namespace InventoryManagementSys
                 command.Parameters.AddWithValue("@dob", dateTimePicker.Value);
                 command.Parameters.AddWithValue("@type", accountType);
 
-                if(command.ExecuteNonQuery() > 0)
+                if (command.ExecuteNonQuery() > 0)
                 {
                     AccountFlash.Visible = true;
                     AccountFlash.Text = "Account Succesfully Created";
                     t.Start();
                 }
-                else 
+                else
                 {
                     AccountFlash.ForeColor = Color.FromArgb(243, 32, 19);
                     AccountFlash.Visible = true;
@@ -184,18 +180,12 @@ namespace InventoryManagementSys
             {
                 MessageBox.Show("Error! Account could not be created!");
             }
-            accountName.Clear();
-            UsrTxtBox.Clear();
-            PassTxtbox.Clear();
+            Clear();
 
             DBConnections.closeConnection();
             UpdateUsersList("");
-            AccountID.Clear();
-            UsernameDisplay.Clear();
-            AccName.Clear();
-            AccountType.Clear();
-            DateOfBirth.Clear();
-            
+            Clear();
+
         }
 
         private void delAccBtn_Click(object sender, EventArgs e)
@@ -209,7 +199,7 @@ namespace InventoryManagementSys
             command = new MySqlCommand(query, DBConnections.connection);
             command.Parameters.AddWithValue("@username", UsernameDisplay.Text);
             DBConnections.openConnection();
-            if(command.ExecuteNonQuery() > 0)
+            if (command.ExecuteNonQuery() > 0)
             {
                 MessageBox.Show("Account Deleted!");
             }
@@ -219,11 +209,20 @@ namespace InventoryManagementSys
             }
             DBConnections.closeConnection();
             UpdateUsersList("");
+            Clear();
+        }
+        void Clear()
+        {
             AccountID.Clear();
             UsernameDisplay.Clear();
             AccName.Clear();
             AccountType.Clear();
             DateOfBirth.Clear();
+            accountName.Clear();
+            UsrTxtBox.Clear();
+            PassTxtbox.Clear();
+            ModifyPass.Clear();
+            ConfirmPass.Clear();
         }
 
         private void modifyPwd_Click(object sender, EventArgs e)
@@ -238,19 +237,21 @@ namespace InventoryManagementSys
             string query = "UPDATE `users` SET `user_password` = @password WHERE `user_username` = @username";
             MySqlCommand command;
             command = new MySqlCommand(query, DBConnections.connection);
-            command.Parameters.AddWithValue("@username", resetUsernameArea.Text);
-            if(ModifyPass.Text == ConfirmPass.Text)
+            if (ModifyPass.Text == ConfirmPass.Text)
             {
+                DBConnections.openConnection();
+                command.Parameters.AddWithValue("@username", username.Text);
                 command.Parameters.AddWithValue("@password", Utilis.hashPassword(ModifyPass.Text));
-                MessageBox.Show("Success");
+                command.ExecuteNonQuery();
+                resetLabel.Text = $"{username.Text}'s account password changed succesfully!";
+                resetLabel.ForeColor = Color.Green;
             }
             else
             {
                 resetLabel.Text = "Please ensure all field has same password";
                 t.Start();
             }
-            ModifyPass.Clear();
-            ConfirmPass.Clear();
+            Clear();
 
             DBConnections.openConnection();
         }

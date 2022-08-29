@@ -54,6 +54,7 @@ namespace InventoryManagementSys
             Control click = (Control)sender;
             click.ForeColor = Color.WhiteSmoke;
             click.BackColor = Color.Navy;
+            hr.BackColor = Color.White;
         }
 
         void Dashboard()
@@ -62,23 +63,27 @@ namespace InventoryManagementSys
             btnLogo.Image = Properties.Resources.icons8_home_45;
 
             _obj = this;
-            Dashboard dashboard = new Dashboard();
+            DashboardPage dashboard = new DashboardPage();
             dashboard.Dock = DockStyle.Fill;
             panelHolder.Controls.Add(dashboard);
+            hr.BackColor = Color.White;
+
         }
         private void Main_Load(object sender, EventArgs e)
         {
             Dashboard();
             ActiveBtn(DashboardButton, null);
+            hr.BackColor = Color.White;
 
         }
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
-            panelHolder.Controls["Dashboard"].BringToFront();
+            panelHolder.Controls["DashboardPage"].BringToFront();
             prodLabel.Text = "Dashboard";
             btnLogo.Image = Properties.Resources.icons8_home_45;
             ActiveBtn(DashboardButton, null);
+            hr.BackColor = Color.White;
         }
 
 
@@ -95,6 +100,7 @@ namespace InventoryManagementSys
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Products";
             btnLogo.Image = Properties.Resources.icons8_product_45;
+            hr.BackColor = Color.White;
         }
 
 
@@ -112,6 +118,7 @@ namespace InventoryManagementSys
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Categories";
             btnLogo.Image = Properties.Resources.icons8_supply_chain_45;
+            hr.BackColor = Color.White;
         }
 
         private void users_Click(object sender, EventArgs e)
@@ -128,6 +135,7 @@ namespace InventoryManagementSys
             prodLabel.Text = "Manage Users";
             btnLogo.Image = Properties.Resources.icons8_select_users_64;
             ActiveBtn(users, null);
+            hr.BackColor = Color.White;
         }
 
         private void Logout_Click(object sender, EventArgs e)

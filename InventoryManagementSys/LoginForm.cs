@@ -15,6 +15,7 @@ namespace InventoryManagementSys
     public partial class Login : Form
     {
         Timer t = new Timer();
+        public static string userName;
         public Login()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace InventoryManagementSys
             MySqlCommand command;
             command = new MySqlCommand(query, DBConnections.connection);
             command.Parameters.AddWithValue("@username", UsrTxtBox.Text);
+            userName = UsrTxtBox.Text;
             command.Parameters.AddWithValue("@password", Utilis.hashPassword(PassTxtbox.Text));
             DBConnections.openConnection();
             var result = command.ExecuteScalar();

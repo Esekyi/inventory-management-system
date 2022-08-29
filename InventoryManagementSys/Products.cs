@@ -186,7 +186,7 @@ namespace InventoryManagementSys
                 DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
                 if (result == DialogResult.Abort)
                 {
-                    Dashboard dashboard = new Dashboard();
+                    DashboardPage dashboard = new DashboardPage();
                     dashboard.Show();
                 }
                 else if (result == DialogResult.Retry)
