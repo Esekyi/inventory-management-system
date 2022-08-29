@@ -7,14 +7,22 @@ namespace InventoryManagementSys.AttendantControls
     public partial class SalesPage : UserControl
     {
         public static string stockAvail, TotalAmountPaid, prodID;
+        Timer t = new Timer();
         public SalesPage()
         {
             InitializeComponent();
             Empty();
+            t.Interval = 3000;
+            t.Tick += T_Tick;
             Time.Text = DateTime.UtcNow.ToString("G");
             attendant.Text = "'" + Login.userName + "'";
             QtyBox.Enabled = false;
 
+        }
+        private void T_Tick(object sender, EventArgs e)
+        {
+            Timer _t = sender as Timer;
+            _t.Stop();
         }
 
 
@@ -197,7 +205,6 @@ namespace InventoryManagementSys.AttendantControls
             DBConnections.openConnection();
             string query = "SELECT `productID`, `stock` FROM `product` WHERE `barcode` regexp @Barcode";
             MySqlCommand command = new MySqlCommand(query, DBConnections.connection);
-            //command.Parameters.Clear();
             command.Parameters.AddWithValue("@Barcode", "[[:<:]]" + BarcodeTxtBox.Text + "[[:>:]]");
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -209,7 +216,9 @@ namespace InventoryManagementSys.AttendantControls
 
             reader.Close();
             int boughtQuantity = Convert.ToInt32(QtyBought.Text);
+            string attendantName = Login.userName;
             int newStock;
+            string dbDate = DateTime.Now.ToString("yyyy-MM-dd");
             try
             {
                 command.CommandText = "INSERT INTO `transaction` (`productID`, `quantityBought`, `amount_paid`,`date_transacted`," +
@@ -218,32 +227,38 @@ namespace InventoryManagementSys.AttendantControls
                 command.Parameters.AddWithValue("@product", product);
                 command.Parameters.AddWithValue("@quantity", boughtQuantity);
                 command.Parameters.AddWithValue("@amtPaid", Convert.ToDouble(TotalPricePaid.Text));
-                command.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-mm-dd"));
+                command.Parameters.AddWithValue("@date", dbDate);
                 command.Parameters.AddWithValue("@cusName", customer.Text);
-                command.Parameters.AddWithValue("@soldBy", attendant.Text.Trim());
-                command.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@soldBy", attendantName);
 
-
-                if (getStockUpdate > boughtQuantity)
+                if(command.ExecuteNonQuery() > 0 && getStockUpdate >= boughtQuantity)
                 {
                     newStock = getStockUpdate - boughtQuantity;
                     DBConnections.openConnection();
-                    string updateQuery = "update product set `stock` = @newStock where barcode regexp @barcode";
-                    MySqlCommand com = new MySqlCommand(updateQuery, DBConnections.connection);
-                    com.Parameters.Clear();
-                    com.Parameters.AddWithValue("@newStock", newStock);
-                    com.Parameters.AddWithValue("@barcode", "[[:<:]]" + BarcodeTxtBox.Text + "[[:>:]]");
+                    command.CommandText = "update product set `stock` = @newStock where barcode regexp @barcode";
+                    command.Parameters.Clear();
+                    command.Parameters.AddWithValue("@newStock", newStock);
+                    command.Parameters.AddWithValue("@barcode", "[[:<:]]" + BarcodeTxtBox.Text + "[[:>:]]");
 
-                    com.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Product has been updated succesfully!");
+                        DBConnections.closeConnection();
+                    }
+                    else
+                    {
+                        erroDB.Visible = true;
+                        erroDB.Text = "Error updating Product!";
+                        t.Start();
+                    }
 
-                    MessageBox.Show("Product has been updated succesfully!");
-                    DBConnections.closeConnection();
                 }
                 else
                 {
                     MessageBox.Show("Error!");
 
                 }
+
 
             }
             catch (Exception ex)

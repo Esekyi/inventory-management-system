@@ -74,6 +74,7 @@ namespace InventoryManagementSys.AttendantControls
             this.Rec = new System.Windows.Forms.Label();
             this.TotalPrice = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.erroDB = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -397,6 +398,7 @@ namespace InventoryManagementSys.AttendantControls
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.QtyBought);
             this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.erroDB);
             this.panel2.Controls.Add(this.attendant);
             this.panel2.Controls.Add(this.id);
             this.panel2.Controls.Add(this.label14);
@@ -542,6 +544,20 @@ namespace InventoryManagementSys.AttendantControls
             this.label6.TabIndex = 1;
             this.label6.Text = "TOTAL (GHC):";
             // 
+            // erroDB
+            // 
+            this.erroDB.AutoSize = true;
+            this.erroDB.BackColor = System.Drawing.Color.Transparent;
+            this.erroDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.erroDB.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.erroDB.ForeColor = System.Drawing.Color.Crimson;
+            this.erroDB.Location = new System.Drawing.Point(293, 480);
+            this.erroDB.Name = "erroDB";
+            this.erroDB.Size = new System.Drawing.Size(103, 30);
+            this.erroDB.TabIndex = 6;
+            this.erroDB.Text = "Error label";
+            this.erroDB.Visible = false;
+            // 
             // SalesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -635,5 +651,6 @@ namespace InventoryManagementSys.AttendantControls
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label attendant;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label erroDB;
     }
 }

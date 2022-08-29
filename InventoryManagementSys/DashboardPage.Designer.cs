@@ -83,7 +83,8 @@ namespace InventoryManagementSys
             // 
             // productsAvailBtn
             // 
-            this.productsAvailBtn.FlatAppearance.BorderSize = 0;
+            this.productsAvailBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.productsAvailBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.productsAvailBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productsAvailBtn.Image = global::InventoryManagementSys.Properties.Resources.icons8_purchase_581;
             this.productsAvailBtn.Location = new System.Drawing.Point(39, 20);
@@ -124,12 +125,16 @@ namespace InventoryManagementSys
             this.label2.ForeColor = System.Drawing.Color.AliceBlue;
             this.label2.Location = new System.Drawing.Point(126, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 45);
+            this.label2.Size = new System.Drawing.Size(354, 45);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Products Available";
+            this.label2.Text = "Low in Stock Products";
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Info;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::InventoryManagementSys.Properties.Resources.icons8_in_stock_58;
             this.button2.Location = new System.Drawing.Point(39, 36);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 85);
