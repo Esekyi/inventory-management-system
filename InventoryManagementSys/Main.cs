@@ -47,7 +47,8 @@ namespace InventoryManagementSys
         void Dashboard()
         {
             prodLabel.Text = "Dashboard";
-    
+            btnLogo.Image = Properties.Resources.icons8_home_28;
+
             _obj = this;
             Dashboard dashboard = new Dashboard();
             dashboard.Dock = DockStyle.Fill;
@@ -62,6 +63,7 @@ namespace InventoryManagementSys
         {
             panelHolder.Controls["Dashboard"].BringToFront();
             prodLabel.Text = "Dashboard";
+            btnLogo.Image = Properties.Resources.icons8_home_28;
         }
 
 
@@ -76,6 +78,7 @@ namespace InventoryManagementSys
             Instance.PanelHolder.Controls["Products"].BringToFront();
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Products";
+            btnLogo.Image = Properties.Resources.icons8_new_product_28;
         }
 
 
@@ -91,6 +94,7 @@ namespace InventoryManagementSys
             Instance.PanelHolder.Controls["Category"].BringToFront();
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Categories";
+            btnLogo.Image = Properties.Resources.icons8_supply_chain_28;
         }
 
         private void users_Click(object sender, EventArgs e)
@@ -104,7 +108,21 @@ namespace InventoryManagementSys
             Main.Instance.PanelHolder.Controls["Users"].BringToFront();
             Main.Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Users";
+            btnLogo.Image = Properties.Resources.icons8_users_30;
         }
 
+        private void TillSale_Click(object sender, EventArgs e)
+        {
+            if (!Instance.PanelHolder.Controls.ContainsKey("Sale"))
+            {
+                Sale SalesPage = new Sale();
+                SalesPage.Dock = DockStyle.Fill;
+                Instance.PanelHolder.Controls.Add(SalesPage);
+            }
+            Main.Instance.PanelHolder.Controls["Sale"].BringToFront();
+            Main.Instance.DashboardButton.Enabled = true;
+            prodLabel.Text = "Transaction Sale";
+            btnLogo.Image = Properties.Resources.icons8_sale_28;
+        }
     }
 }

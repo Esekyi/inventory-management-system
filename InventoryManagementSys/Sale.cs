@@ -15,6 +15,7 @@ namespace InventoryManagementSys
             InitializeComponent();
             Sale_Load();
             barcodePanle.Visible = false;
+            productPanel.Visible = true;
 
         }
         void Sale_Load()
@@ -25,6 +26,7 @@ namespace InventoryManagementSys
         private void BarcodeScan_Click(object sender, EventArgs e)
         {
             barcodePanle.Visible = true;
+            productPanel.Visible = false;
         }
 
     }
