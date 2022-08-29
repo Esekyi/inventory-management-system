@@ -103,9 +103,29 @@ namespace InventoryManagementSys.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_graph_report_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-graph-report-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_home_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-home-45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +153,29 @@ namespace InventoryManagementSys.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_product_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-product-45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_sale_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-sale-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_select_users_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-select-users-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +206,26 @@ namespace InventoryManagementSys.Properties {
         internal static System.Drawing.Bitmap icons8_supply_chain_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-supply-chain-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_supply_chain_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-supply-chain-45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_total_sales_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-total-sales-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
