@@ -159,14 +159,14 @@ namespace InventoryManagementSys
             this.hostPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hostPanel.Location = new System.Drawing.Point(0, 169);
             this.hostPanel.Name = "hostPanel";
-            this.hostPanel.Size = new System.Drawing.Size(1740, 985);
+            this.hostPanel.Size = new System.Drawing.Size(1740, 1030);
             this.hostPanel.TabIndex = 3;
             // 
             // AttendantMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1740, 1154);
+            this.ClientSize = new System.Drawing.Size(1740, 1199);
             this.Controls.Add(this.hostPanel);
             this.Controls.Add(this.btnPanel);
             this.Controls.Add(this.logoPanel);
