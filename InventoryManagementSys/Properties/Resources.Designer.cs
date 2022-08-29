@@ -93,6 +93,16 @@ namespace InventoryManagementSys.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-28", resourceCulture);
@@ -136,6 +146,16 @@ namespace InventoryManagementSys.Properties {
         internal static System.Drawing.Bitmap icons8_shopify_120 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shopify-120", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_shopify_60 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-shopify-60", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
