@@ -32,7 +32,7 @@ namespace InventoryManagementSys
             this.logoPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.userLabel = new System.Windows.Forms.Label();
             this.textLabel = new System.Windows.Forms.Label();
             this.SalesBtn = new System.Windows.Forms.Button();
             this.LogsBtn = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@ namespace InventoryManagementSys
             this.logoPanel.BackColor = System.Drawing.SystemColors.Highlight;
             this.logoPanel.Controls.Add(this.pictureBox1);
             this.logoPanel.Controls.Add(this.BtnClose);
-            this.logoPanel.Controls.Add(this.label1);
+            this.logoPanel.Controls.Add(this.userLabel);
             this.logoPanel.Controls.Add(this.textLabel);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
@@ -69,28 +69,29 @@ namespace InventoryManagementSys
             // BtnClose
             // 
             this.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClose.ForeColor = System.Drawing.SystemColors.Highlight;
             this.BtnClose.Image = global::InventoryManagementSys.Properties.Resources.icons8_close_35;
-            this.BtnClose.Location = new System.Drawing.Point(1600, 4);
+            this.BtnClose.Location = new System.Drawing.Point(1623, 11);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(111, 80);
+            this.BtnClose.Size = new System.Drawing.Size(111, 65);
             this.BtnClose.TabIndex = 1;
             this.BtnClose.UseVisualStyleBackColor = true;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // label1
+            // userLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(763, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 40);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "username";
+            this.userLabel.AutoSize = true;
+            this.userLabel.BackColor = System.Drawing.Color.Transparent;
+            this.userLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.userLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.userLabel.Location = new System.Drawing.Point(763, 21);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(146, 40);
+            this.userLabel.TabIndex = 1;
+            this.userLabel.Text = "username";
             // 
             // textLabel
             // 
@@ -156,11 +157,13 @@ namespace InventoryManagementSys
             // 
             // hostPanel
             // 
+            this.hostPanel.AutoSize = true;
+            this.hostPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hostPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hostPanel.Location = new System.Drawing.Point(0, 169);
             this.hostPanel.Name = "hostPanel";
             this.hostPanel.Size = new System.Drawing.Size(1740, 1030);
-            this.hostPanel.TabIndex = 3;
+            this.hostPanel.TabIndex = 0;
             // 
             // AttendantMain
             // 
@@ -179,6 +182,7 @@ namespace InventoryManagementSys
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.btnPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -188,7 +192,7 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label textLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.Button SalesBtn;
         private System.Windows.Forms.Button LogsBtn;
         private System.Windows.Forms.Panel btnPanel;

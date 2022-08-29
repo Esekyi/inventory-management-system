@@ -29,7 +29,6 @@ namespace InventoryManagementSys
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Category));
             this.catTable = new System.Windows.Forms.DataGridView();
             this.cagegoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,10 +52,13 @@ namespace InventoryManagementSys
             this.catTable.AllowUserToDeleteRows = false;
             this.catTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.catTable.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.catTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.catTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.catTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cagegoryID,
             this.categoryName});
+            this.catTable.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.catTable.Location = new System.Drawing.Point(0, 309);
             this.catTable.Margin = new System.Windows.Forms.Padding(5);
             this.catTable.Name = "catTable";
@@ -89,14 +91,13 @@ namespace InventoryManagementSys
             this.addNewCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewCat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addNewCat.ForeColor = System.Drawing.Color.White;
-            this.addNewCat.Image = ((System.Drawing.Image)(resources.GetObject("addNewCat.Image")));
-            this.addNewCat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addNewCat.Image = global::InventoryManagementSys.Properties.Resources.icons8_add_32;
             this.addNewCat.Location = new System.Drawing.Point(11, 215);
             this.addNewCat.Name = "addNewCat";
-            this.addNewCat.Size = new System.Drawing.Size(211, 61);
+            this.addNewCat.Size = new System.Drawing.Size(251, 61);
             this.addNewCat.TabIndex = 21;
             this.addNewCat.Text = "Add Category";
-            this.addNewCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addNewCat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addNewCat.UseVisualStyleBackColor = false;
             this.addNewCat.Click += new System.EventHandler(this.addNewCat_Click);
             // 
@@ -133,10 +134,12 @@ namespace InventoryManagementSys
             // 
             // prodTxtBox
             // 
+            this.prodTxtBox.BackColor = System.Drawing.Color.White;
             this.prodTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prodTxtBox.Location = new System.Drawing.Point(216, 20);
+            this.prodTxtBox.Location = new System.Drawing.Point(200, 17);
             this.prodTxtBox.Name = "prodTxtBox";
-            this.prodTxtBox.Size = new System.Drawing.Size(337, 32);
+            this.prodTxtBox.PlaceholderText = "category";
+            this.prodTxtBox.Size = new System.Drawing.Size(346, 32);
             this.prodTxtBox.TabIndex = 0;
             // 
             // reload
@@ -160,7 +163,7 @@ namespace InventoryManagementSys
             this.enterIDLabel.BackColor = System.Drawing.Color.Transparent;
             this.enterIDLabel.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Pixel);
             this.enterIDLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.enterIDLabel.Location = new System.Drawing.Point(796, 170);
+            this.enterIDLabel.Location = new System.Drawing.Point(796, 177);
             this.enterIDLabel.Name = "enterIDLabel";
             this.enterIDLabel.Size = new System.Drawing.Size(397, 28);
             this.enterIDLabel.TabIndex = 27;
@@ -169,38 +172,39 @@ namespace InventoryManagementSys
             // deleteBtn
             // 
             this.deleteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.deleteBtn.BackColor = System.Drawing.Color.DarkRed;
+            this.deleteBtn.BackColor = System.Drawing.Color.Navy;
             this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deleteBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.deleteBtn.Location = new System.Drawing.Point(1071, 125);
+            this.deleteBtn.Image = global::InventoryManagementSys.Properties.Resources.icons8_delete_32;
+            this.deleteBtn.Location = new System.Drawing.Point(1074, 118);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(138, 39);
+            this.deleteBtn.Size = new System.Drawing.Size(122, 48);
             this.deleteBtn.TabIndex = 26;
             this.deleteBtn.Text = "Delete";
+            this.deleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // idTxtBox
             // 
             this.idTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.idTxtBox.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.idTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idTxtBox.Location = new System.Drawing.Point(802, 125);
+            this.idTxtBox.BackColor = System.Drawing.Color.White;
+            this.idTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.idTxtBox.Location = new System.Drawing.Point(800, 125);
             this.idTxtBox.Name = "idTxtBox";
             this.idTxtBox.PlaceholderText = "Category ID";
-            this.idTxtBox.Size = new System.Drawing.Size(264, 39);
+            this.idTxtBox.Size = new System.Drawing.Size(264, 32);
             this.idTxtBox.TabIndex = 25;
             this.idTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(26)))), ((int)(((byte)(82)))));
-            this.label1.Location = new System.Drawing.Point(812, 45);
+            this.label1.Location = new System.Drawing.Point(855, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(295, 50);
             this.label1.TabIndex = 23;
@@ -210,7 +214,7 @@ namespace InventoryManagementSys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.enterIDLabel);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.idTxtBox);

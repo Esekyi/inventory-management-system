@@ -31,7 +31,7 @@ namespace InventoryManagementSys
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.hr = new System.Windows.Forms.Panel();
             this.Logout = new System.Windows.Forms.Button();
             this.HomeLogo = new System.Windows.Forms.PictureBox();
             this.TillSale = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@ namespace InventoryManagementSys
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(107)))));
-            this.sidePanel.Controls.Add(this.panel2);
+            this.sidePanel.Controls.Add(this.hr);
             this.sidePanel.Controls.Add(this.Logout);
             this.sidePanel.Controls.Add(this.HomeLogo);
             this.sidePanel.Controls.Add(this.TillSale);
@@ -66,13 +66,13 @@ namespace InventoryManagementSys
             this.sidePanel.Size = new System.Drawing.Size(255, 1559);
             this.sidePanel.TabIndex = 0;
             // 
-            // panel2
+            // hr
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 164);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 3);
-            this.panel2.TabIndex = 12;
+            this.hr.BackColor = System.Drawing.Color.White;
+            this.hr.Location = new System.Drawing.Point(0, 164);
+            this.hr.Name = "hr";
+            this.hr.Size = new System.Drawing.Size(255, 3);
+            this.hr.TabIndex = 12;
             // 
             // Logout
             // 
@@ -100,7 +100,7 @@ namespace InventoryManagementSys
             this.HomeLogo.Image = global::InventoryManagementSys.Properties.Resources.icons8_shopify_120;
             this.HomeLogo.Location = new System.Drawing.Point(12, 21);
             this.HomeLogo.Name = "HomeLogo";
-            this.HomeLogo.Size = new System.Drawing.Size(113, 125);
+            this.HomeLogo.Size = new System.Drawing.Size(98, 103);
             this.HomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomeLogo.TabIndex = 1;
             this.HomeLogo.TabStop = false;
@@ -237,6 +237,7 @@ namespace InventoryManagementSys
             // 
             this.panelHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHolder.BackColor = System.Drawing.Color.Gainsboro;
             this.panelHolder.Location = new System.Drawing.Point(286, 234);
             this.panelHolder.Name = "panelHolder";
             this.panelHolder.Size = new System.Drawing.Size(1530, 1202);
@@ -247,6 +248,7 @@ namespace InventoryManagementSys
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1844, 1559);
             this.Controls.Add(this.panelHolder);
@@ -277,7 +279,7 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Label prodLabel;
         private System.Windows.Forms.Button users;
         private System.Windows.Forms.PictureBox btnLogo;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel hr;
         private System.Windows.Forms.Panel panelHolder;
         private System.Windows.Forms.Button TillSale;
         private System.Windows.Forms.Button Logout;

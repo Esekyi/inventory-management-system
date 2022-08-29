@@ -64,10 +64,11 @@ namespace InventoryManagementSys
             int id = Convert.ToInt32(idText);
             if (editprodNameTxtBox.Text != "" & editpriceTxtBox.Text !="" & editqtyTxtBox.Text !="" & barcodeTxtBox.Text !="")
             {
-                string query = "update product set `product_name` = '"+ editprodNameTxtBox.Text.Trim() + "', `product_price` = '" + editpriceTxtBox.Text.Trim() + "', `stock` = '"+ editqtyTxtBox.Text.Trim() + "', `barcode` = '"+ barcodeTxtBox.Text.Trim() + "', `categoryName` ='"+ categorynameDB.ToString() + "' where `productID` = '" + id + "'";
+                string query = "update product set `product_name` = '"+ editprodNameTxtBox.Text.Trim() + "', `product_price` = '" + editpriceTxtBox.Text.Trim() + "', `stock` = '"+ editqtyTxtBox.Text.Trim() + "',`reoderLevel` = '"+ reoderTxtbox.Text.Trim() + "', `barcode` = '"+ barcodeTxtBox.Text.Trim() + "', `categoryName` ='"+ categorynameDB.ToString() + "' where `productID` = '" + id + "'";
                 command = new MySqlCommand(query, DBConnections.connection);
                 command.ExecuteNonQuery();
-                MessageBox.Show($"Product with {id} has been updated succesfully!");
+                MessageBox.Show("Product has been updated succesfully!");
+                DBConnections.closeConnection();
             }
             else
             {

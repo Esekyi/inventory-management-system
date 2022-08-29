@@ -58,6 +58,8 @@ namespace InventoryManagementSys
                 DBConnections.openConnection();
                 command.ExecuteNonQuery();
                 MessageBox.Show("Product Added Successfully");
+                catTable.Rows.Clear();
+                FillgridView();
                 DBConnections.closeConnection();
                 prodTxtBox.Clear();
             }
@@ -84,6 +86,11 @@ namespace InventoryManagementSys
                 catTable.Rows[numberRow].Cells[0].Value = product["catID"].ToString().ToLower();
                 catTable.Rows[numberRow].Cells[1].Value = product["categoryName"].ToString().ToLower();
             }
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

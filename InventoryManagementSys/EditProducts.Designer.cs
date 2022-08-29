@@ -49,11 +49,15 @@ namespace InventoryManagementSys
             this.prodName = new System.Windows.Forms.Label();
             this.editprodNameTxtBox = new System.Windows.Forms.TextBox();
             this.deletebtn = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.reoderTxtbox = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // cancelBtn
@@ -63,7 +67,7 @@ namespace InventoryManagementSys
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
             this.cancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelBtn.Location = new System.Drawing.Point(780, 633);
+            this.cancelBtn.Location = new System.Drawing.Point(780, 729);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(161, 61);
             this.cancelBtn.TabIndex = 7;
@@ -77,7 +81,7 @@ namespace InventoryManagementSys
             this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savebtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.savebtn.ForeColor = System.Drawing.Color.White;
-            this.savebtn.Location = new System.Drawing.Point(282, 633);
+            this.savebtn.Location = new System.Drawing.Point(282, 729);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(161, 61);
             this.savebtn.TabIndex = 5;
@@ -103,7 +107,7 @@ namespace InventoryManagementSys
             this.panel5.Controls.Add(this.categorylabel);
             this.panel5.Controls.Add(this.categorySelctBox);
             this.panel5.Controls.Add(this.catLabel);
-            this.panel5.Location = new System.Drawing.Point(282, 513);
+            this.panel5.Location = new System.Drawing.Point(282, 609);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(659, 74);
             this.panel5.TabIndex = 15;
@@ -140,7 +144,7 @@ namespace InventoryManagementSys
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.barcode);
             this.panel3.Controls.Add(this.barcodeTxtBox);
-            this.panel3.Location = new System.Drawing.Point(282, 398);
+            this.panel3.Location = new System.Drawing.Point(282, 494);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(659, 74);
             this.panel3.TabIndex = 16;
@@ -186,9 +190,10 @@ namespace InventoryManagementSys
             // editqtyTxtBox
             // 
             this.editqtyTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.editqtyTxtBox.Location = new System.Drawing.Point(103, 18);
+            this.editqtyTxtBox.Location = new System.Drawing.Point(91, 19);
             this.editqtyTxtBox.Name = "editqtyTxtBox";
-            this.editqtyTxtBox.Size = new System.Drawing.Size(163, 32);
+            this.editqtyTxtBox.PlaceholderText = "Quantity";
+            this.editqtyTxtBox.Size = new System.Drawing.Size(178, 32);
             this.editqtyTxtBox.TabIndex = 2;
             // 
             // panel2
@@ -214,9 +219,10 @@ namespace InventoryManagementSys
             // editpriceTxtBox
             // 
             this.editpriceTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.editpriceTxtBox.Location = new System.Drawing.Point(86, 20);
+            this.editpriceTxtBox.Location = new System.Drawing.Point(91, 20);
             this.editpriceTxtBox.Name = "editpriceTxtBox";
-            this.editpriceTxtBox.Size = new System.Drawing.Size(154, 32);
+            this.editpriceTxtBox.PlaceholderText = "Unit price";
+            this.editpriceTxtBox.Size = new System.Drawing.Size(148, 32);
             this.editpriceTxtBox.TabIndex = 1;
             // 
             // panel1
@@ -224,7 +230,7 @@ namespace InventoryManagementSys
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.prodName);
             this.panel1.Controls.Add(this.editprodNameTxtBox);
-            this.panel1.Location = new System.Drawing.Point(282, 136);
+            this.panel1.Location = new System.Drawing.Point(282, 150);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(659, 74);
             this.panel1.TabIndex = 19;
@@ -254,7 +260,7 @@ namespace InventoryManagementSys
             this.deletebtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.deletebtn.ForeColor = System.Drawing.Color.White;
             this.deletebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.deletebtn.Location = new System.Drawing.Point(522, 633);
+            this.deletebtn.Location = new System.Drawing.Point(522, 729);
             this.deletebtn.Name = "deletebtn";
             this.deletebtn.Size = new System.Drawing.Size(161, 61);
             this.deletebtn.TabIndex = 6;
@@ -262,11 +268,41 @@ namespace InventoryManagementSys
             this.deletebtn.UseVisualStyleBackColor = false;
             this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.reoderTxtbox);
+            this.panel6.Location = new System.Drawing.Point(282, 381);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(659, 74);
+            this.panel6.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(26)))), ((int)(((byte)(82)))));
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Reorder Level: ";
+            // 
+            // reoderTxtbox
+            // 
+            this.reoderTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reoderTxtbox.Location = new System.Drawing.Point(179, 18);
+            this.reoderTxtbox.Name = "reoderTxtbox";
+            this.reoderTxtbox.PlaceholderText = "Reoder Level";
+            this.reoderTxtbox.Size = new System.Drawing.Size(461, 32);
+            this.reoderTxtbox.TabIndex = 1;
+            // 
             // EditProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 749);
+            this.ClientSize = new System.Drawing.Size(1249, 900);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.savebtn);
@@ -276,12 +312,11 @@ namespace InventoryManagementSys
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MaximumSize = new System.Drawing.Size(1249, 820);
-            this.MinimumSize = new System.Drawing.Size(1249, 820);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1249, 900);
+            this.MinimumSize = new System.Drawing.Size(1249, 831);
             this.Name = "EditProducts";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Edit Product";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.EditProducts_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -293,6 +328,8 @@ namespace InventoryManagementSys
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +357,8 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Label prodName;
         private System.Windows.Forms.TextBox editprodNameTxtBox;
         private System.Windows.Forms.Button deletebtn;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox reoderTxtbox;
     }
 }
