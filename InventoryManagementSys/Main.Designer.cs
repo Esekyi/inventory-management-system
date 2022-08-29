@@ -30,7 +30,7 @@ namespace InventoryManagementSys
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Logout = new System.Windows.Forms.Button();
             this.HomeLogo = new System.Windows.Forms.PictureBox();
@@ -43,28 +43,28 @@ namespace InventoryManagementSys
             this.btnLogo = new System.Windows.Forms.PictureBox();
             this.prodLabel = new System.Windows.Forms.Label();
             this.panelHolder = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // sidePanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(107)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.Logout);
-            this.panel1.Controls.Add(this.HomeLogo);
-            this.panel1.Controls.Add(this.TillSale);
-            this.panel1.Controls.Add(this.users);
-            this.panel1.Controls.Add(this.CategoryBtn);
-            this.panel1.Controls.Add(this.ProductsBtn);
-            this.panel1.Controls.Add(this.DashboardBtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 1559);
-            this.panel1.TabIndex = 0;
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(79)))), ((int)(((byte)(107)))));
+            this.sidePanel.Controls.Add(this.panel2);
+            this.sidePanel.Controls.Add(this.Logout);
+            this.sidePanel.Controls.Add(this.HomeLogo);
+            this.sidePanel.Controls.Add(this.TillSale);
+            this.sidePanel.Controls.Add(this.users);
+            this.sidePanel.Controls.Add(this.CategoryBtn);
+            this.sidePanel.Controls.Add(this.ProductsBtn);
+            this.sidePanel.Controls.Add(this.DashboardBtn);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(255, 1559);
+            this.sidePanel.TabIndex = 0;
             // 
             // panel2
             // 
@@ -251,11 +251,11 @@ namespace InventoryManagementSys
             this.ClientSize = new System.Drawing.Size(1844, 1559);
             this.Controls.Add(this.panelHolder);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.sidePanel);
             this.Name = "Main";
             this.Text = "Products";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.panel1.ResumeLayout(false);
+            this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -267,7 +267,7 @@ namespace InventoryManagementSys
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Button CategoryBtn;
         private System.Windows.Forms.PictureBox HomeLogo;
         private System.Windows.Forms.Panel panel5;

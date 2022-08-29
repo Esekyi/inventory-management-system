@@ -44,6 +44,18 @@ namespace InventoryManagementSys
         }
         //DASHBOARD - HOME ---------------------------START-----------------------------
 
+        private void ActiveBtn(object sender, EventArgs e)
+        {
+            foreach(Control control in sidePanel.Controls)
+            {
+                control.BackColor = Color.Gold;
+                control.ForeColor = Color.Wheat;
+            }
+            Control click = (Control)sender;
+            click.ForeColor = Color.Gold;
+            click.BackColor = Color.Wheat;
+        }
+
         void Dashboard()
         {
             prodLabel.Text = "Dashboard";
@@ -61,6 +73,7 @@ namespace InventoryManagementSys
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
+            ActiveBtn(DashboardButton, null);
             panelHolder.Controls["Dashboard"].BringToFront();
             prodLabel.Text = "Dashboard";
             btnLogo.Image = Properties.Resources.icons8_home_28;
@@ -75,6 +88,8 @@ namespace InventoryManagementSys
                 productsPage.Dock = DockStyle.Fill;
                 Instance.PanelHolder.Controls.Add(productsPage);
             }
+            ActiveBtn(ProductsBtn, null);
+
             Instance.PanelHolder.Controls["Products"].BringToFront();
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Products";
@@ -91,6 +106,8 @@ namespace InventoryManagementSys
                 categoryPage.Dock = DockStyle.Fill;
                 Main.Instance.PanelHolder.Controls.Add(categoryPage);
             }
+            ActiveBtn(CategoryBtn, null);
+
             Instance.PanelHolder.Controls["Category"].BringToFront();
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Categories";
@@ -105,6 +122,8 @@ namespace InventoryManagementSys
                 usersPage.Dock = DockStyle.Fill;
                 Instance.PanelHolder.Controls.Add(usersPage);
             }
+            ActiveBtn(users, null);
+
             Main.Instance.PanelHolder.Controls["Users"].BringToFront();
             Main.Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Users";
@@ -119,6 +138,8 @@ namespace InventoryManagementSys
                 SalesPage.Dock = DockStyle.Fill;
                 Instance.PanelHolder.Controls.Add(SalesPage);
             }
+            ActiveBtn(TillSale, null);
+
             Main.Instance.PanelHolder.Controls["Sale"].BringToFront();
             Main.Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Transaction Sale";
