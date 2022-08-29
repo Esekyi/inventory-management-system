@@ -76,6 +76,7 @@ namespace InventoryManagementSys
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ShowProductsCombo = new System.Windows.Forms.Button();
             this.salePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,6 +101,7 @@ namespace InventoryManagementSys
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.ShowProductsCombo);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label14);
@@ -597,6 +599,20 @@ namespace InventoryManagementSys
             this.label1.TabIndex = 0;
             this.label1.Text = "Date";
             // 
+            // ShowProductsCombo
+            // 
+            this.ShowProductsCombo.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ShowProductsCombo.Image = global::InventoryManagementSys.Properties.Resources.icons8_sale_28;
+            this.ShowProductsCombo.Location = new System.Drawing.Point(91, 169);
+            this.ShowProductsCombo.Name = "ShowProductsCombo";
+            this.ShowProductsCombo.Size = new System.Drawing.Size(243, 57);
+            this.ShowProductsCombo.TabIndex = 7;
+            this.ShowProductsCombo.Text = "Choose Products";
+            this.ShowProductsCombo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ShowProductsCombo.UseVisualStyleBackColor = true;
+            this.ShowProductsCombo.Visible = false;
+            this.ShowProductsCombo.Click += new System.EventHandler(this.ShowProductsCombo_Click);
+            // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -673,5 +689,6 @@ namespace InventoryManagementSys
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label totalTag;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button ShowProductsCombo;
     }
 }

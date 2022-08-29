@@ -16,7 +16,7 @@ namespace InventoryManagementSys
             Sale_Load();
             barcodePanle.Visible = false;
             productPanel.Visible = true;
-
+            ShowProductsCombo.Visible = false;
         }
         void Sale_Load()
         {
@@ -27,7 +27,12 @@ namespace InventoryManagementSys
         {
             barcodePanle.Visible = true;
             productPanel.Visible = false;
+            ShowProductsCombo.Visible = true;
         }
 
+        private void ShowProductsCombo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
