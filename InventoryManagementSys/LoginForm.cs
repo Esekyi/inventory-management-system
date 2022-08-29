@@ -95,5 +95,20 @@ namespace InventoryManagementSys
             PassTxtbox.Clear();
 
         }
+
+        private void showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showPass.Checked == true)
+            {
+
+                PassTxtbox.UseSystemPasswordChar = false;
+                //showPass.Text = "Show Password";
+            }
+            else
+            {
+                PassTxtbox.UseSystemPasswordChar = true;
+                //showPass.Text = "Hide Password";
+            }
+        }
     }
 }

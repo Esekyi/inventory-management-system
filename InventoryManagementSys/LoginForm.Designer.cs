@@ -89,12 +89,12 @@ namespace InventoryManagementSys
             // PassTxtbox
             // 
             this.PassTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PassTxtbox.Location = new System.Drawing.Point(157, 23);
+            this.PassTxtbox.Location = new System.Drawing.Point(157, 21);
             this.PassTxtbox.Name = "PassTxtbox";
-            this.PassTxtbox.PasswordChar = '*';
-            this.PassTxtbox.PlaceholderText = "**************";
+            this.PassTxtbox.PlaceholderText = "Password ****";
             this.PassTxtbox.Size = new System.Drawing.Size(503, 36);
             this.PassTxtbox.TabIndex = 2;
+            this.PassTxtbox.UseSystemPasswordChar = true;
             this.PassTxtbox.TextChanged += new System.EventHandler(this.PassTxtbox_TextChanged);
             // 
             // panel1
@@ -128,6 +128,7 @@ namespace InventoryManagementSys
             this.showPass.TabIndex = 5;
             this.showPass.Text = "Show Password";
             this.showPass.UseVisualStyleBackColor = true;
+            this.showPass.CheckedChanged += new System.EventHandler(this.showPass_CheckedChanged);
             // 
             // errorLabel
             // 
