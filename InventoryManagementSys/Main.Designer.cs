@@ -92,7 +92,7 @@ namespace InventoryManagementSys
             this.Logout.Text = "Logout";
             this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Logout.UseVisualStyleBackColor = false;
-            this.Logout.Click += new System.EventHandler(this.users_Click);
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // HomeLogo
             // 
@@ -121,7 +121,6 @@ namespace InventoryManagementSys
             this.TillSale.Text = "Sale/Till";
             this.TillSale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TillSale.UseVisualStyleBackColor = true;
-            this.TillSale.Click += new System.EventHandler(this.TillSale_Click);
             // 
             // users
             // 
@@ -213,9 +212,10 @@ namespace InventoryManagementSys
             // btnLogo
             // 
             this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
-            this.btnLogo.Location = new System.Drawing.Point(7, 21);
+            this.btnLogo.Location = new System.Drawing.Point(43, 39);
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(33, 40);
+            this.btnLogo.Size = new System.Drawing.Size(50, 40);
+            this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnLogo.TabIndex = 3;
             this.btnLogo.TabStop = false;
             // 
@@ -226,7 +226,7 @@ namespace InventoryManagementSys
             this.prodLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.prodLabel.ForeColor = System.Drawing.Color.Snow;
             this.prodLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.prodLabel.Location = new System.Drawing.Point(36, 3);
+            this.prodLabel.Location = new System.Drawing.Point(98, 21);
             this.prodLabel.Name = "prodLabel";
             this.prodLabel.Size = new System.Drawing.Size(227, 65);
             this.prodLabel.TabIndex = 0;
@@ -253,6 +253,7 @@ namespace InventoryManagementSys
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.sidePanel);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Products";
             this.Load += new System.EventHandler(this.Main_Load);
             this.sidePanel.ResumeLayout(false);

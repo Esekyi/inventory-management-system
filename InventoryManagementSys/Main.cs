@@ -48,18 +48,18 @@ namespace InventoryManagementSys
         {
             foreach(Control control in sidePanel.Controls)
             {
-                control.BackColor = Color.Gold;
-                control.ForeColor = Color.Wheat;
+                control.BackColor = Color.FromArgb(54, 79, 107);
+                control.ForeColor = Color.WhiteSmoke;
             }
             Control click = (Control)sender;
-            click.ForeColor = Color.Gold;
-            click.BackColor = Color.Wheat;
+            click.ForeColor = Color.WhiteSmoke;
+            click.BackColor = Color.Navy;
         }
 
         void Dashboard()
         {
             prodLabel.Text = "Dashboard";
-            btnLogo.Image = Properties.Resources.icons8_home_28;
+            btnLogo.Image = Properties.Resources.icons8_home_45;
 
             _obj = this;
             Dashboard dashboard = new Dashboard();
@@ -69,14 +69,16 @@ namespace InventoryManagementSys
         private void Main_Load(object sender, EventArgs e)
         {
             Dashboard();
+            ActiveBtn(DashboardButton, null);
+
         }
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
-            ActiveBtn(DashboardButton, null);
             panelHolder.Controls["Dashboard"].BringToFront();
             prodLabel.Text = "Dashboard";
-            btnLogo.Image = Properties.Resources.icons8_home_28;
+            btnLogo.Image = Properties.Resources.icons8_home_45;
+            ActiveBtn(DashboardButton, null);
         }
 
 
@@ -89,11 +91,10 @@ namespace InventoryManagementSys
                 Instance.PanelHolder.Controls.Add(productsPage);
             }
             ActiveBtn(ProductsBtn, null);
-
             Instance.PanelHolder.Controls["Products"].BringToFront();
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Products";
-            btnLogo.Image = Properties.Resources.icons8_new_product_28;
+            btnLogo.Image = Properties.Resources.icons8_product_45;
         }
 
 
@@ -107,11 +108,10 @@ namespace InventoryManagementSys
                 Main.Instance.PanelHolder.Controls.Add(categoryPage);
             }
             ActiveBtn(CategoryBtn, null);
-
             Instance.PanelHolder.Controls["Category"].BringToFront();
             Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Categories";
-            btnLogo.Image = Properties.Resources.icons8_supply_chain_28;
+            btnLogo.Image = Properties.Resources.icons8_supply_chain_45;
         }
 
         private void users_Click(object sender, EventArgs e)
@@ -122,28 +122,19 @@ namespace InventoryManagementSys
                 usersPage.Dock = DockStyle.Fill;
                 Instance.PanelHolder.Controls.Add(usersPage);
             }
-            ActiveBtn(users, null);
 
             Main.Instance.PanelHolder.Controls["Users"].BringToFront();
             Main.Instance.DashboardButton.Enabled = true;
             prodLabel.Text = "Manage Users";
-            btnLogo.Image = Properties.Resources.icons8_users_30;
+            btnLogo.Image = Properties.Resources.icons8_select_users_64;
+            ActiveBtn(users, null);
         }
 
-        private void TillSale_Click(object sender, EventArgs e)
+        private void Logout_Click(object sender, EventArgs e)
         {
-            if (!Instance.PanelHolder.Controls.ContainsKey("Sale"))
-            {
-                Sale SalesPage = new Sale();
-                SalesPage.Dock = DockStyle.Fill;
-                Instance.PanelHolder.Controls.Add(SalesPage);
-            }
-            ActiveBtn(TillSale, null);
-
-            Main.Instance.PanelHolder.Controls["Sale"].BringToFront();
-            Main.Instance.DashboardButton.Enabled = true;
-            prodLabel.Text = "Transaction Sale";
-            btnLogo.Image = Properties.Resources.icons8_sale_28;
+            Close();
+            Login Admin = new Login();
+            Admin.Show();
         }
     }
 }

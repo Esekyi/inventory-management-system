@@ -46,7 +46,8 @@ namespace InventoryManagementSys
             Main.Instance.PanelHolder.Controls["Users"].BringToFront();
             Main.Instance.DashboardButton.Enabled = true;
         }
-         private void UpdateUsersList(string query)
+
+        private void UpdateUsersList(string query)
         {
             MySqlCommand command;
             command = new MySqlCommand(query, DBConnections.connection);

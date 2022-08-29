@@ -65,7 +65,7 @@ namespace InventoryManagementSys
                 else
                 {
                     DBConnections.openConnection();
-                    command.CommandText = "select `account_id`, `account_type` from `account` where `account_useID`=@userID";
+                    command.CommandText = "select `account_id`, `account_type` from `account` where `account_userID`=@userID";
                     command.Parameters.AddWithValue("@userID", result.ToString());
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
@@ -77,7 +77,9 @@ namespace InventoryManagementSys
 
                         if(account_type == 0)
                         {
-                            //attendant panel
+                            Hide();
+                            AttendantMain Attendant = new AttendantMain();
+                            Attendant.Show();
                         }
                     }
 
