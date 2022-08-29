@@ -14,6 +14,7 @@ namespace InventoryManagementSys
         public EditProducts()
         {
             InitializeComponent();
+            DropDowncategorySelctBox();
         }
 
         private void EditProducts_Load(object sender, EventArgs e)
@@ -87,6 +88,36 @@ namespace InventoryManagementSys
                 {
                     // Do something  
                 }
+            }
+        }
+        private void DropDowncategorySelctBox()
+        {
+
+            MySqlConnection conn = new MySqlConnection("Server = localhost; Database = inventory_shoprite; Uid = root; pwd =\"\";");
+            string query = "SELECT * FROM prodcategories";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            //categorySelctBox.SelectedIndex = -1;
+
+            MySqlDataReader reader;
+            try
+            {
+                conn.Open();
+                reader = cmd.ExecuteReader();
+                //cmd.ExecuteNonQuery();
+                //conn.Close();
+
+
+
+                while (reader.Read())
+                {
+                    //categorySelctBox.SelectedIndex = 0;
+                    categorySelctBox.Items.Add(reader.GetString("categoryName"));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
