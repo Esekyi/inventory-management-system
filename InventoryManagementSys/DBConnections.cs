@@ -4,12 +4,11 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace InventoryManagementSys.SingleClasses
+namespace InventoryManagementSys
 {
     internal class DBConnections
     {
-        public static string connectionString = "server=localhost; database=inventory_shoprite," +
-            "uid=root,pwd=\"\"";
+        public static string connectionString = "Server=localhost; Database=inventory_shoprite; Uid=root;pwd=\"\";";
         
         public static MySqlConnection connection = new MySqlConnection(connectionString);
         public static void openConnection()
