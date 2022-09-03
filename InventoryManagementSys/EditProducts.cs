@@ -20,10 +20,9 @@ namespace InventoryManagementSys
         {
             DBConnections.openConnection();
             MySqlCommand command;
-            string idText = Products.Modify;
-            //string id = idText.ToString();
-            //editprodNameTxtBox.Text = idText.ToString();
-            string query = "select product_name,product_price,stock,barcode,categoryName from product where '" + idText + "'";
+            string idText = Main.Modify;
+            string id = idText.ToString();
+            string query = "select product_name,product_price,stock,barcode,categoryName from product where productID = '" + id + "'";
             command = new MySqlCommand(query, DBConnections.connection);
             command.ExecuteNonQuery();
             MySqlDataReader reader;

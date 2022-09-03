@@ -30,9 +30,9 @@ namespace InventoryManagementSys
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            Products Home = new Products();
+            Main Home = new Main();
             Home.Show();
-            this.Hide();
+            Hide();
         }
         public static string MD5Hash(string input)
         {

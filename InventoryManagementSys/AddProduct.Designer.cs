@@ -145,9 +145,9 @@ namespace InventoryManagementSys
             // barcodeTxtBox
             // 
             this.barcodeTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.barcodeTxtBox.Location = new System.Drawing.Point(142, 19);
+            this.barcodeTxtBox.Location = new System.Drawing.Point(119, 19);
             this.barcodeTxtBox.Name = "barcodeTxtBox";
-            this.barcodeTxtBox.Size = new System.Drawing.Size(501, 32);
+            this.barcodeTxtBox.Size = new System.Drawing.Size(524, 32);
             this.barcodeTxtBox.TabIndex = 4;
             // 
             // panel4
@@ -201,9 +201,9 @@ namespace InventoryManagementSys
             // priceTxtBox
             // 
             this.priceTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.priceTxtBox.Location = new System.Drawing.Point(79, 20);
+            this.priceTxtBox.Location = new System.Drawing.Point(90, 20);
             this.priceTxtBox.Name = "priceTxtBox";
-            this.priceTxtBox.Size = new System.Drawing.Size(176, 32);
+            this.priceTxtBox.Size = new System.Drawing.Size(165, 32);
             this.priceTxtBox.TabIndex = 2;
             // 
             // panel1

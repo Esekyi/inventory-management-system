@@ -57,42 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="prod_name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="prod_price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="prod_stock.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="prod_category.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="prod_code.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="addProd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
-        DAAAAgwBpQlclAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALLSURBVFhH7Zg/
-        aBNRHMeDi4qD4OCmg6KDk4sooq2x0daA2k5OVSdBEbGNNDi4OImTbo1jakE7BtpNhTolUhocmlzuLneX
-        u0vjYMXFP9X2+X3Hi+Su7/4luUz3hQ8JF7jvJ+9djvslESdOnAhimuYhcK1pGHcoDVV9KsvyXBgkSXqu
-        qupZdsr+ZEOW9zdNcx5SW4C0URWFVKvVrhBF0YDwMVbRfXCi3ZApdoq16UWQUqvVfmJFD7Kq7qIoyp4v
-        mnaEh6EoJ3VFGXZDkaRxrNILfEmTJ0ipS9IHVhU8uq7vxQpNYltf4jXnhqaqi1iBNTdkUSxDcBbnOwDZ
-        B4IgbDkFsYq/WW2wrDcap1CugR1b6iToFkPiDwRvYTduQHLH56zaP81m8zCKvzpF3AhzDUJsG4JnZEl6
-        7/wM2cUUvIMtfcUTcSPsjwTXYsUwjOPO44EF1w3D5Im4EVYQW/2X9uD1V+fx4CvouM/50c1thspIovjN
-        eYwpeIcn4UUPghvOY0zBOzwJL2JBZ3gSbiy8fUOupMdIJpOxCfgxMMFH01MkmbxALo+O2gT8iFzw4/Iy
-        mX89R27fnLQEh5NJMpPNktlczibiRqSC5ZUVcil1kaRGkhZU8NzQ0H/y+bxNhkekgkJljUyMX+cKngeL
-        S0s2GR6RClLUep2UV1fJ/Xt3LcGRVIoUCgVSKpVsIm5ELtjmcXbGEhxLp20CfgxM8FOxSKamHwa67joZ
-        mCClHzdq+hDL6v3Dk/CiH4J4/5nV+4cn4UWvgvQhVtO0E6zePyjddEp40Y0g7cHz4PeaIGxC7qpVHDQo
-        rTglvAgriBWzBiQ6QNFp0SoNEzxRP+GJuBFWEPPIO1bVXVqt1j4Ul50iboQRFGu1HxhFexvSaegMi/IF
-        sN0pwyOoIIalBjjKKvoTawTV9QmIWH8U8fD780iR5We41k6zU8aJE6d/SST+ATWgaYV83SkGAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
 </root>

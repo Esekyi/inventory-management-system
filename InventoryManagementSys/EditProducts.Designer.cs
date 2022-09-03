@@ -93,7 +93,7 @@ namespace InventoryManagementSys
             this.addProdTxt.Location = new System.Drawing.Point(495, 42);
             this.addProdTxt.Name = "addProdTxt";
             this.addProdTxt.Size = new System.Drawing.Size(228, 50);
-            this.addProdTxt.TabIndex = 20;
+            this.addProdTxt.TabIndex = 0;
             this.addProdTxt.Text = "Edit Product\r\n";
             // 
             // panel5
@@ -157,9 +157,9 @@ namespace InventoryManagementSys
             // barcodeTxtBox
             // 
             this.barcodeTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.barcodeTxtBox.Location = new System.Drawing.Point(151, 19);
+            this.barcodeTxtBox.Location = new System.Drawing.Point(119, 20);
             this.barcodeTxtBox.Name = "barcodeTxtBox";
-            this.barcodeTxtBox.Size = new System.Drawing.Size(492, 32);
+            this.barcodeTxtBox.Size = new System.Drawing.Size(524, 32);
             this.barcodeTxtBox.TabIndex = 4;
             // 
             // panel4
@@ -243,7 +243,7 @@ namespace InventoryManagementSys
             this.editprodNameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.editprodNameTxtBox.Location = new System.Drawing.Point(193, 19);
             this.editprodNameTxtBox.Name = "editprodNameTxtBox";
-            this.editprodNameTxtBox.Size = new System.Drawing.Size(399, 32);
+            this.editprodNameTxtBox.Size = new System.Drawing.Size(439, 32);
             this.editprodNameTxtBox.TabIndex = 1;
             // 
             // deletebtn

@@ -4,37 +4,55 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
-using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace InventoryManagementSys
 {
-    public partial class Products : Form
+    public partial class Products : UserControl
     {
-        public static string Modify;
         public Products()
         {
             InitializeComponent();
             FillgridView();
+        }
+        public static string Modify;
+
+
+        private void ProductsBtn_Click(object sender, EventArgs e)
+        {
+
+            if (!Main.Instance.PanelHolder.Controls.ContainsKey("Products"))
+            {
+                Products productsPage = new Products();
+                productsPage.Dock = DockStyle.Fill;
+                Main.Instance.PanelHolder.Controls.Add(productsPage);
+            }
             
-
+            Main.Instance.PanelHolder.Controls["Products"].BringToFront();
+            Main.Instance.DashboardButton.Enabled = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void CategoryBtn_Click(object sender, EventArgs e)
         {
-
+            if (!Main.Instance.PanelHolder.Controls.ContainsKey("Category"))
+            {
+                Category categoryPage = new Category();
+                categoryPage.Dock = DockStyle.Fill;
+                Main.Instance.PanelHolder.Controls.Add(categoryPage);
+            }
+            Main.Instance.PanelHolder.Controls["Category"].BringToFront();
+            Main.Instance.DashboardButton.Enabled = true;
         }
 
-        private void HomeBtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void addProd_Click(object sender, EventArgs e)
         {
             AddProduct editProduct = new AddProduct();
             editProduct.Show();
         }
+
+
         void FillgridView()
         {
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -43,7 +61,7 @@ namespace InventoryManagementSys
             MySqlDataAdapter insert = new MySqlDataAdapter("select * from product", conn);
             DataTable dataTable = new DataTable();
             insert.Fill(dataTable);
-            foreach(DataRow product in dataTable.Rows)
+            foreach (DataRow product in dataTable.Rows)
             {
                 int numberRow = gridView.Rows.Add();
                 gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString();
@@ -55,42 +73,66 @@ namespace InventoryManagementSys
             }
         }
 
-      private void reloadProducts()
+        private void reloadProducts()
         {
-            
+
             MySqlConnection conn = new MySqlConnection("Server = localhost; Database = inventory_shoprite; Uid = root; pwd =\"\";");
             conn.Open();
             MySqlDataAdapter insert = new MySqlDataAdapter("select * from product", conn);
-            DataSet dataTable = new DataSet();
-             insert.Fill(dataTable, "product");
-            gridView.DataSource = dataTable.Tables[0];
+            DataTable dataTable = new DataTable();
+            insert.Fill(dataTable);
+
+            foreach (DataRow product in dataTable.Rows)
+            {
+                int numberRow = gridView.Rows.Add();
+                gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString();
+                gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString();
+                gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString();
+                gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString();
+                gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString();
+                gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString();
+            }
         }
 
         private void reload_Click(object sender, EventArgs e)
         {
+            gridView.DataSource = null;
+            gridView.Rows.Clear();
             reloadProducts();
         }
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            string query = "select * from product where product_name like '"+ searchArea.Text.Trim() + "%'";
-            DataSet ds = new DataSet();
-            DataView dv;
+            gridView.DataSource = null;
+            gridView.Rows.Clear();
+            string query = "select * from product where product_name like '" + searchArea.Text.Trim() + "%'";
+            DataTable ds = new DataTable();
+            //DataView dv;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             if (searchArea.Text != "")
             {
 
                 try
                 {
-                    
+
                     MySqlCommand command = new MySqlCommand(query, DBConnections.connection);
                     adapter.SelectCommand = command;
                     adapter.Fill(ds);
-                    DBConnections.closeConnection();
-                    dv = ds.Tables[0].DefaultView;
-                    gridView.DataSource = dv;
+                    //DBConnections.closeConnection();
+                    //dv = ds.Tables[0].DefaultView;
+                    //gridView.DataSource = dv;
+                    foreach (DataRow product in ds.Rows)
+                    {
+                        int numberRow = gridView.Rows.Add();
+                        gridView.Rows[numberRow].Cells[0].Value = product["productID"].ToString();
+                        gridView.Rows[numberRow].Cells[1].Value = product["product_name"].ToString();
+                        gridView.Rows[numberRow].Cells[2].Value = product["product_price"].ToString();
+                        gridView.Rows[numberRow].Cells[3].Value = product["stock"].ToString();
+                        gridView.Rows[numberRow].Cells[4].Value = product["categoryName"].ToString();
+                        gridView.Rows[numberRow].Cells[5].Value = product["barcode"].ToString();
+                    }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -100,6 +142,8 @@ namespace InventoryManagementSys
                 FillgridView();
             }
         }
+
+
         void ModifyID()
         {
 
@@ -137,21 +181,26 @@ namespace InventoryManagementSys
                 DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
                 if (result == DialogResult.Abort)
                 {
-                    Close();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
                 }
-                else if(result == DialogResult.Retry) {
+                else if (result == DialogResult.Retry)
+                {
                     //Close();
-                } else
+                }
+                else
                 {
                     // Do something  
                 }
             }
         }
 
-        private void modifybtn_Click_1(object sender, EventArgs e)
+        private void modifybtn_Click(object sender, EventArgs e)
         {
             ModifyID();
-           
         }
+
+        //DASHBOARD - HOME ---------------------------ENDS-----------------------------------------------------------------------------
+
     }
 }

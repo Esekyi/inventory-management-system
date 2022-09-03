@@ -36,6 +36,7 @@ namespace InventoryManagementSys
             this.PassTxtbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.showPass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,31 +45,32 @@ namespace InventoryManagementSys
             // 
             this.LoginUsrname.AutoSize = true;
             this.LoginUsrname.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LoginUsrname.Location = new System.Drawing.Point(8, 17);
+            this.LoginUsrname.Location = new System.Drawing.Point(8, 18);
             this.LoginUsrname.Name = "LoginUsrname";
-            this.LoginUsrname.Size = new System.Drawing.Size(136, 37);
+            this.LoginUsrname.Size = new System.Drawing.Size(142, 37);
             this.LoginUsrname.TabIndex = 0;
-            this.LoginUsrname.Text = "Username";
+            this.LoginUsrname.Text = "Username:";
             this.LoginUsrname.Click += new System.EventHandler(this.LoginUsrname_Click);
             // 
             // LoginPwd
             // 
             this.LoginPwd.AutoSize = true;
             this.LoginPwd.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LoginPwd.Location = new System.Drawing.Point(8, 17);
+            this.LoginPwd.Location = new System.Drawing.Point(8, 20);
             this.LoginPwd.Name = "LoginPwd";
-            this.LoginPwd.Size = new System.Drawing.Size(128, 37);
+            this.LoginPwd.Size = new System.Drawing.Size(134, 37);
             this.LoginPwd.TabIndex = 0;
-            this.LoginPwd.Text = "Password";
+            this.LoginPwd.Text = "Password:";
             // 
             // LoginButton
             // 
             this.LoginButton.AutoSize = true;
             this.LoginButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(400, 376);
+            this.LoginButton.Location = new System.Drawing.Point(400, 370);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(284, 69);
+            this.LoginButton.Size = new System.Drawing.Size(284, 75);
             this.LoginButton.TabIndex = 3;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -77,17 +79,20 @@ namespace InventoryManagementSys
             // UsrTxtBox
             // 
             this.UsrTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsrTxtBox.Location = new System.Drawing.Point(157, 17);
+            this.UsrTxtBox.Location = new System.Drawing.Point(158, 18);
             this.UsrTxtBox.Name = "UsrTxtBox";
-            this.UsrTxtBox.Size = new System.Drawing.Size(470, 36);
+            this.UsrTxtBox.PlaceholderText = "username";
+            this.UsrTxtBox.Size = new System.Drawing.Size(503, 36);
             this.UsrTxtBox.TabIndex = 1;
             // 
             // PassTxtbox
             // 
             this.PassTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PassTxtbox.Location = new System.Drawing.Point(157, 20);
+            this.PassTxtbox.Location = new System.Drawing.Point(157, 23);
             this.PassTxtbox.Name = "PassTxtbox";
-            this.PassTxtbox.Size = new System.Drawing.Size(470, 36);
+            this.PassTxtbox.PasswordChar = '*';
+            this.PassTxtbox.PlaceholderText = "**************";
+            this.PassTxtbox.Size = new System.Drawing.Size(503, 36);
             this.PassTxtbox.TabIndex = 2;
             this.PassTxtbox.TextChanged += new System.EventHandler(this.PassTxtbox_TextChanged);
             // 
@@ -111,6 +116,18 @@ namespace InventoryManagementSys
             this.panel2.Size = new System.Drawing.Size(688, 82);
             this.panel2.TabIndex = 4;
             // 
+            // showPass
+            // 
+            this.showPass.AutoSize = true;
+            this.showPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.showPass.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.showPass.Location = new System.Drawing.Point(690, 295);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(205, 36);
+            this.showPass.TabIndex = 5;
+            this.showPass.Text = "Show Password";
+            this.showPass.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -118,6 +135,7 @@ namespace InventoryManagementSys
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1126, 497);
+            this.Controls.Add(this.showPass);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LoginButton);
@@ -146,6 +164,7 @@ namespace InventoryManagementSys
         private System.Windows.Forms.TextBox PassTxtbox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckBox showPass;
     }
 }
 
