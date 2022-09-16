@@ -13,6 +13,19 @@ namespace InventoryManagementSys
         public Sale()
         {
             InitializeComponent();
+            Sale_Load();
+            barcodePanle.Visible = false;
+
         }
+        void Sale_Load()
+        {
+            barcodeScan.Click += new EventHandler(BarcodeScan_Click);
+        }
+
+        private void BarcodeScan_Click(object sender, EventArgs e)
+        {
+            barcodePanle.Visible = true;
+        }
+
     }
 }
